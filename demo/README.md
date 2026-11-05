@@ -64,3 +64,14 @@ apply these changes again:
 4. Every page has `<meta name="viewport" content="width=device-width, initial-scale=1">`
    after `<meta charset="utf-8">`, so phones use the mobile layout. (The canvas
    viewer supplies this itself, so exported files don't have it.)
+
+## Phone menu (demo only)
+
+Below 720px, `support.js` collapses the drawer row into a small filing-cabinet
+button whose three drawer fronts double as hamburger lines. It opens a
+full-screen "card catalog" overlay: Home on top, then one tabbed file folder
+per drawer (Explore, My Stacks, Curation), with each page shown as an index
+card. The current section's folder starts open, and the current page is marked
+"You are here". Ask the desk stays in the header. The overlay is built from
+each page's own menu, so the page files didn't change. It isn't on the canvas
+yet; if it's kept, it should go there as a proper mobile header.

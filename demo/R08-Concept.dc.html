@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Stacks — R8 Concept page</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&amp;family=Libre+Caslon+Text:wght@400;700&amp;family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F5F2EC}
+a{color:#1F4E8C}a:hover{color:#123462}
+/*stk-nav*/.drw{position:relative}.drw>summary{list-style:none;cursor:pointer}.drw>summary::-webkit-details-marker{display:none}
+.drw-menu{display:none !important}.drw[open] .drw-menu{display:flex !important}
+@media (hover: hover){.drw:hover .drw-menu{display:flex !important}.drw-front:hover{transform:translateY(1px)}}
+.bell:hover svg{transform:rotate(-8deg)}/*end-stk-nav*/
+</style>
+</helmet>
+<div style="font-family: 'Public Sans', system-ui, sans-serif; color: #1E1C19; background: #F5F2EC; min-height: 100vh">
+
+  <header style="background: #FFFDF9; border-bottom: 1px solid #CFC9BD; position: relative; z-index: 20">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 10px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 24px; min-height: 68px; box-sizing: border-box">
+      <a href="R01-Home.dc.html" style="font-family: 'Libre Caslon Text', Georgia, serif; font-size: 26px; color: #1E1C19; text-decoration: none; display: inline-flex; align-items: center; gap: 10px">
+        <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><rect x="2" y="4" width="18" height="14" rx="1.5" fill="none" stroke="#1E1C19" stroke-width="1.6"></rect><line x1="2" y1="8" x2="20" y2="8" stroke="#C0392B" stroke-width="1.6"></line><circle cx="11" cy="15" r="1.4" fill="#1E1C19"></circle></svg>
+        Stacks
+      </a>
+      <nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 8px; flex: 1 1 auto; align-items: center">
+        <a class="drw-front" href="R01-Home.dc.html" style="background: #FFFDF9; border: 1px solid #E5E0D6; box-shadow: 0 1px 0 #E5E0D6; border-radius: 4px; padding: 6px 12px 5px; min-height: 44px; box-sizing: border-box; color: #1E1C19; display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; transition: transform 120ms; text-decoration: none"><span style="border: 1px solid #CFC9BD; border-radius: 2px; padding: 2px 10px; background: #FFFDF9; font-size: 14.5px; font-weight: 600; line-height: 1.3; white-space: nowrap; display: inline-flex; align-items: center">Home</span><span aria-hidden="true" style="width: 20px; height: 4px; border-radius: 3px; background: #CFC9BD"></span></a>
+        <details class="drw"><summary class="drw-front" aria-label="Explore menu (current section)" style="background: #F5F2EC; border: 1px solid #4F4B43; box-shadow: 0 3px 0 #CFC9BD, inset 0 1px 0 #FFFDF9; transform: translateY(-1px); border-radius: 4px; padding: 6px 12px 5px; min-height: 44px; box-sizing: border-box; color: #1E1C19; display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; transition: transform 120ms"><span style="border: 1px solid #1E1C19; border-radius: 2px; padding: 2px 10px; background: #FFFDF9; font-size: 14.5px; font-weight: 700; line-height: 1.3; white-space: nowrap; display: inline-flex; align-items: center">Explore<span aria-hidden="true" style="font-size: 10px; color: #5E5950; margin-left: 4px">▾</span></span><span aria-hidden="true" style="width: 20px; height: 4px; border-radius: 3px; background: #4F4B43"></span></summary><div class="drw-menu" style="position: absolute; left: 0; top: 100%; z-index: 30; min-width: 230px; flex-direction: column; background: #FFFDF9; border: 1px solid #CFC9BD; border-radius: 4px; box-shadow: 0 10px 22px rgba(40,32,20,0.16)"><span style="padding: 7px 12px 5px; font-family: 'Courier Prime', monospace; font-size: 11px; letter-spacing: 0.1em; color: #5E5950">IN THIS DRAWER</span><a href="R10-Field.dc.html" style="display: flex; flex-direction: column; gap: 1px; padding: 8px 12px; border-top: 1px solid #EEEAE2; text-decoration: none; color: #1E1C19; min-height: 44px; box-sizing: border-box"><span style="font-size: 14.5px; font-weight: 600">Fields</span><span style="font-family: 'Courier Prime', monospace; font-size: 10.5px; letter-spacing: 0.08em; color: #5E5950">BY DISCIPLINE</span></a><a href="R03-Questions.dc.html" aria-current="page" style="display: flex; flex-direction: column; gap: 1px; padding: 8px 12px; border-top: 1px solid #EEEAE2; text-decoration: none; color: #1E1C19; min-height: 44px; box-sizing: border-box; background: #F5F2EC; box-shadow: inset 3px 0 0 #1E1C19"><span style="font-size: 14.5px; font-weight: 700">Questions</span><span style="font-family: 'Courier Prime', monospace; font-size: 10.5px; letter-spacing: 0.08em; color: #5E5950">ANSWERS + EVIDENCE</span></a><a href="R11-Directions.dc.html" style="display: flex; flex-direction: column; gap: 1px; padding: 8px 12px; border-top: 1px solid #EEEAE2; text-decoration: none; color: #1E1C19; min-height: 44px; box-sizing: border-box"><span style="font-size: 14.5px; font-weight: 600">Research directions</span><span style="font-family: 'Courier Prime', monospace; font-size: 10.5px; letter-spacing: 0.08em; color: #5E5950">OPEN PROBLEMS</span></a></div></details>
+        <details class="drw"><summary class="drw-front" aria-label="My Stacks menu" style="background: #FFFDF9; border: 1px solid #E5E0D6; box-shadow: 0 1px 0 #E5E0D6; border-radius: 4px; padding: 6px 12px 5px; min-height: 44px; box-sizing: border-box; color: #1E1C19; display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; transition: transform 120ms"><span style="border: 1px solid #CFC9BD; border-radius: 2px; padding: 2px 10px; background: #FFFDF9; font-size: 14.5px; font-weight: 600; line-height: 1.3; white-space: nowrap; display: inline-flex; align-items: center">My Stacks<span aria-hidden="true" style="font-size: 10px; color: #5E5950; margin-left: 4px">▾</span></span><span aria-hidden="true" style="width: 20px; height: 4px; border-radius: 3px; background: #CFC9BD"></span></summary><div class="drw-menu" style="position: absolute; left: 0; top: 100%; z-index: 30; min-width: 230px; flex-direction: column; background: #FFFDF9; border: 1px solid #CFC9BD; border-radius: 4px; box-shadow: 0 10px 22px rgba(40,32,20,0.16)"><span style="padding: 7px 12px 5px; font-family: 'Courier Prime', monospace; font-size: 11px; letter-spacing: 0.1em; color: #5E5950">IN THIS DRAWER</span><a href="C08-MyStacks.dc.html" style="display: flex; flex-direction: column; gap: 1px; padding: 8px 12px; border-top: 1px solid #EEEAE2; text-decoration: none; color: #1E1C19; min-height: 44px; box-sizing: border-box"><span style="font-size: 14.5px; font-weight: 600">Overview</span><span style="font-family: 'Courier Prime', monospace; font-size: 10.5px; letter-spacing: 0.08em; color: #5E5950">START HERE</span></a><a href="C02-Deposit.dc.html" style="display: flex; flex-direction: column; gap: 1px; padding: 8px 12px; border-top: 1px solid #EEEAE2; text-decoration: none; color: #1E1C19; min-height: 44px; box-sizing: border-box"><span style="font-size: 14.5px; font-weight: 600">Deposit</span><span style="font-family: 'Courier Prime', monospace; font-size: 10.5px; letter-spacing: 0.08em; color: #5E5950">SUBMIT WORK</span></a><a href="C05-Claim.dc.html" style="display: flex; flex-direction: column; gap: 1px; padding: 8px 12px; border-top: 1px solid #EEEAE2; text-decoration: none; color: #1E1C19; min-height: 44px; box-sizing: border-box"><span style="font-size: 14.5px; font-weight: 600">Claim records</span><span style="font-family: 'Courier Prime', monospace; font-size: 10.5px; letter-spacing: 0.08em; color: #5E5950">YOUR INDEXED WORK</span></a><a href="C07-Response.dc.html" style="display: flex; flex-direction: column; gap: 1px; padding: 8px 12px; border-top: 1px solid #EEEAE2; text-decoration: none; color: #1E1C19; min-height: 44px; box-sizing: border-box"><span style="font-size: 14.5px; font-weight: 600">Reviews</span><span style="font-family: 'Courier Prime', monospace; font-size: 10.5px; letter-spacing: 0.08em; color: #5E5950">GIVE + ANSWER</span></a><a href="C09-Follows.dc.html" style="display: flex; flex-direction: column; gap: 1px; padding: 8px 12px; border-top: 1px solid #EEEAE2; text-decoration: none; color: #1E1C19; min-height: 44px; box-sizing: border-box"><span style="font-size: 14.5px; font-weight: 600">Following</span><span style="font-family: 'Courier Prime', monospace; font-size: 10.5px; letter-spacing: 0.08em; color: #5E5950">DIGEST + ALERTS</span></a></div></details>
+        <details class="drw"><summary class="drw-front" aria-label="Curation menu" style="background: #FFFDF9; border: 1px solid #E5E0D6; box-shadow: 0 1px 0 #E5E0D6; border-radius: 4px; padding: 6px 12px 5px; min-height: 44px; box-sizing: border-box; color: #1E1C19; display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; transition: transform 120ms"><span style="border: 1px solid #CFC9BD; border-radius: 2px; padding: 2px 10px; background: #FFFDF9; font-size: 14.5px; font-weight: 600; line-height: 1.3; white-space: nowrap; display: inline-flex; align-items: center">Curation<span aria-hidden="true" style="font-size: 10px; color: #5E5950; margin-left: 4px">▾</span></span><span aria-hidden="true" style="width: 20px; height: 4px; border-radius: 3px; background: #CFC9BD"></span></summary><div class="drw-menu" style="position: absolute; left: 0; top: 100%; z-index: 30; min-width: 230px; flex-direction: column; background: #FFFDF9; border: 1px solid #CFC9BD; border-radius: 4px; box-shadow: 0 10px 22px rgba(40,32,20,0.16)"><span style="padding: 7px 12px 5px; font-family: 'Courier Prime', monospace; font-size: 11px; letter-spacing: 0.1em; color: #5E5950">IN THIS DRAWER</span><a href="A01-AuditQueue.dc.html" style="display: flex; flex-direction: column; gap: 1px; padding: 8px 12px; border-top: 1px solid #EEEAE2; text-decoration: none; color: #1E1C19; min-height: 44px; box-sizing: border-box"><span style="font-size: 14.5px; font-weight: 600">Audit queue</span><span style="font-family: 'Courier Prime', monospace; font-size: 10.5px; letter-spacing: 0.08em; color: #5E5950">CHECK THE AI</span></a><a href="A03-QuestionEditor.dc.html" style="display: flex; flex-direction: column; gap: 1px; padding: 8px 12px; border-top: 1px solid #EEEAE2; text-decoration: none; color: #1E1C19; min-height: 44px; box-sizing: border-box"><span style="font-size: 14.5px; font-weight: 600">My questions</span><span style="font-family: 'Courier Prime', monospace; font-size: 10.5px; letter-spacing: 0.08em; color: #5E5950">STEWARDING</span></a><a href="A04-Moderation.dc.html" style="display: flex; flex-direction: column; gap: 1px; padding: 8px 12px; border-top: 1px solid #EEEAE2; text-decoration: none; color: #1E1C19; min-height: 44px; box-sizing: border-box"><span style="font-size: 14.5px; font-weight: 600">Moderation</span><span style="font-family: 'Courier Prime', monospace; font-size: 10.5px; letter-spacing: 0.08em; color: #5E5950">FLAGS + APPEALS</span></a><a href="A05-FieldSettings.dc.html" style="display: flex; flex-direction: column; gap: 1px; padding: 8px 12px; border-top: 1px solid #EEEAE2; text-decoration: none; color: #1E1C19; min-height: 44px; box-sizing: border-box"><span style="font-size: 14.5px; font-weight: 600">Field settings</span><span style="font-family: 'Courier Prime', monospace; font-size: 10.5px; letter-spacing: 0.08em; color: #5E5950">TYPES + WEIGHTS</span></a><a href="A06-ModelRuns.dc.html" style="display: flex; flex-direction: column; gap: 1px; padding: 8px 12px; border-top: 1px solid #EEEAE2; text-decoration: none; color: #1E1C19; min-height: 44px; box-sizing: border-box"><span style="font-size: 14.5px; font-weight: 600">Model runs</span><span style="font-family: 'Courier Prime', monospace; font-size: 10.5px; letter-spacing: 0.08em; color: #5E5950">EVALUATION</span></a><a href="A07-Ingestion.dc.html" style="display: flex; flex-direction: column; gap: 1px; padding: 8px 12px; border-top: 1px solid #EEEAE2; text-decoration: none; color: #1E1C19; min-height: 44px; box-sizing: border-box"><span style="font-size: 14.5px; font-weight: 600">Ingestion</span><span style="font-family: 'Courier Prime', monospace; font-size: 10.5px; letter-spacing: 0.08em; color: #5E5950">HARVESTERS</span></a></div></details>
+      </nav>
+      <div style="display: flex; align-items: center; gap: 12px">
+        <button class="bell" type="button" onClick="{{toggleAsk}}" aria-expanded="{{askExpanded}}" style="font-family: 'Public Sans', sans-serif; font-size: 14px; font-weight: 600; min-height: 44px; padding: 8px 14px 8px 10px; border-radius: 999px; border: 1px solid #1E1C19; background: #1E1C19; color: #FFFDF9; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 2px 0 #CFC9BD"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" style="transition: transform 120ms"><path d="M4 18h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path><path d="M6 17.5a6 6 0 0 1 12 0" fill="none" stroke="currentColor" stroke-width="1.8"></path><path d="M12 9V7.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path><circle cx="12" cy="6.2" r="1.3" fill="currentColor"></circle><path d="M3 20.5h18" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.5"></path></svg><span>Ask the desk</span></button>
+        <a href="C08-MyStacks.dc.html" aria-label="Your account: R. Alvarez" style="width: 44px; height: 44px; border-radius: 999px; background: #EEEAE2; border: 1px solid #E5E0D6; display: inline-flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; color: #1E1C19; text-decoration: none; box-sizing: border-box">RA</a>
+      </div>
+    </div>
+  </header>
+
+  <div style="max-width: 1200px; margin: 0 auto; padding: 24px 24px 80px; display: flex; flex-direction: column; gap: 26px">
+    <nav aria-label="Breadcrumb" style="font-size: 14px; color: #5E5950"><a href="R03-Questions.dc.html">Instructional design</a> › Concepts › Self-explanation</nav>
+    <sc-if value="{{askOpen}}" hint-placeholder-val="{{ false }}">
+      <section aria-label="Reference desk" style="background: #FFFDF9; border: 1px solid #E5E0D6; border-radius: 8px; padding: 18px 20px; display: flex; flex-direction: column; gap: 10px">
+        <label for="ask" style="font-size: 15px; font-weight: 600">Ask about this concept</label>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px">
+          <input id="ask" type="text" placeholder="e.g., How is self-explanation different from elaboration?" style="flex: 1 1 280px; min-width: 0; font: inherit; font-size: 16px; padding: 12px 14px; border: 1px solid #CFC9BD; border-radius: 6px; background: #FFFDF9; color: #1E1C19">
+          <a href="R02-Ask.dc.html" style="font-size: 15px; font-weight: 600; min-height: 44px; padding: 10px 18px; border-radius: 6px; background: #1E1C19; color: #FFFDF9; text-decoration: none; display: inline-flex; align-items: center; box-sizing: border-box">Ask</a>
+        </div>
+        <span style="font-size: 13px; color: #5E5950">Answers come from what you're looking at and the questions it links to, with every claim traced. <a href="R02-Ask.dc.html">Open the full reference desk</a></span>
+      </section>
+    </sc-if>
+
+    <section style="display: flex; flex-direction: column; gap: 10px; max-width: 860px">
+      <span style="font-family: 'Courier Prime', monospace; font-size: 13px; letter-spacing: 0.08em; color: #5E5950">CONCEPT · CONSTRUCT · IN 3,210 WORKS · 61 QUESTIONS · 4 FIELDS</span>
+      <h1 style="margin: 0; font-family: 'Libre Caslon Text', Georgia, serif; font-weight: 400; font-size: clamp(30px, 4vw, 42px); line-height: 1.15">Self-explanation</h1>
+      <span style="font-size: 15px; color: #4F4B43">Also called: self-explaining, explanation prompting, explain-first (in tutor design)</span>
+    </section>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start">
+      <main style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 26px">
+        <article style="background: #FFFDF9; border: 1px solid #E5E0D6; border-radius: 6px; padding: 18px 22px; display: flex; flex-direction: column; gap: 10px">
+          <span style="font-family: 'Courier Prime', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; color: #4F4B43">DEFINITION</span>
+          <p style="margin: 0; font-size: 17px; line-height: 1.6">Generating explanations to yourself while studying or solving problems: why a step works, how it connects to what you know. Distinct from explaining to someone else, and from receiving an explanation.</p>
+          <span style="align-self: flex-start; font-size: 13px; color: #2F6B3A; font-weight: 500">✓ Confirmed by steward · drafted from the 40 most-cited of 3,210 works</span>
+        </article>
+
+        <section style="display: flex; flex-direction: column; gap: 10px">
+          <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; align-items: baseline">
+            <h2 style="margin: 0; font-size: 20px; font-weight: 700">How it developed</h2>
+            <span style="font-size: 13px; color: #5E5950">4 turning points chosen from 3,210 works by how much later work builds on them</span>
+          </div>
+          <sc-for list="{{works}}" as="w" hint-placeholder-count="4">
+            <a href="R06-Record.dc.html" style="background: #FFFDF9; border: 1px solid #E5E0D6; border-radius: 6px; padding: 12px 16px; text-decoration: none; color: #1E1C19; display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center">
+              <span style="{{w.yearStyle}}">{{w.year}}</span>
+              <span style="flex: 1 1 280px; min-width: 0; display: flex; flex-direction: column; gap: 3px">
+                <span style="font-family: 'Courier Prime', monospace; font-size: 11.5px; letter-spacing: 0.08em; color: #2F6B3A; font-weight: 700">{{w.role}}</span>
+                <span style="font-size: 15px; font-weight: 600; line-height: 1.4">{{w.title}}</span>
+                <span style="font-size: 13px; color: #4F4B43">{{w.who}}</span>
+              </span>
+            </a>
+          </sc-for>
+          <a href="R05-Lineage.dc.html" style="align-self: flex-start; font-size: 14px; font-weight: 600; min-height: 44px; display: inline-flex; align-items: center">Build a reading path (filter by years, reading time, study type)</a>
+        </section>
+
+        <section style="display: flex; flex-direction: column; gap: 10px">
+          <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; align-items: center">
+            <h2 style="margin: 0; font-size: 20px; font-weight: 700">Questions it appears in · 61</h2>
+            <label for="cq-field" style="position: absolute; left: -9999px">Field</label>
+            <select id="cq-field" style="font: inherit; font-size: 14px; min-height: 44px; padding: 6px 10px; border: 1px solid #CFC9BD; border-radius: 6px; background: #FFFDF9; color: #1E1C19"><option>All 4 fields</option><option>Instructional design (38)</option><option>Intelligent tutoring systems (14)</option><option>Educational psychology (7)</option><option>Mathematics education (2)</option></select>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px">
+            <sc-for list="{{questions}}" as="q" hint-placeholder-count="4">
+              <a href="R04-Question.dc.html" style="background: #FFFDF9; border: 1px solid #E5E0D6; border-radius: 6px; padding: 14px 16px; text-decoration: none; color: #1E1C19; display: flex; flex-direction: column; gap: 6px">
+                <span style="font-family: 'Libre Caslon Text', Georgia, serif; font-size: 17px; line-height: 1.35">{{q.q}}</span>
+                <span style="font-family: 'Courier Prime', monospace; font-size: 12px; color: #5E5950">{{q.meta}}</span>
+              </a>
+            </sc-for>
+          </div>
+          <a href="R03-Questions.dc.html" style="align-self: flex-start; font-size: 14px; font-weight: 600; min-height: 44px; display: inline-flex; align-items: center">Show all 61 in the question browser</a>
+        </section>
+      </main>
+
+      <aside style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
+        <h2 style="margin: 0; font-size: 17px; font-weight: 700">Related concepts</h2>
+        <sc-for list="{{related}}" as="r" hint-placeholder-count="4">
+          <a href="R08-Concept.dc.html" style="background: #FFFDF9; border: 1px solid #E5E0D6; border-left: 3px solid #2F6B3A; border-radius: 6px; padding: 12px 14px; text-decoration: none; color: #1E1C19; display: flex; flex-direction: column; gap: 4px">
+            <span style="font-family: 'Courier Prime', monospace; font-size: 11.5px; letter-spacing: 0.08em; color: #2F6B3A; font-weight: 700">{{r.rel}}</span>
+            <span style="font-size: 15px; font-weight: 500">{{r.name}}</span>
+          </a>
+        </sc-for>
+        <div style="border: 1px dashed #ABA597; border-radius: 6px; padding: 12px 14px; display: flex; flex-direction: column; gap: 6px">
+          <span style="font-size: 14px; line-height: 1.45">Is “explanation prompting” the same concept, or its own?</span>
+          <span style="align-self: flex-start; font-family: 'Courier Prime', monospace; font-style: italic; font-size: 12px; color: #635E54; border: 1px dashed #ABA597; border-radius: 4px; padding: 2px 8px">merge pencilled by model · 0.72 · <a href="A02-AuditItem.dc.html" style="color: #635E54">in audit</a></span>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2100}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { ask: false }; }
+  renderVals() {
+    var self = this;
+    var tilts = [-3, 2, -1.5, 2.5];
+    var ys = function (i) { return "flex: none; display: inline-block; transform: rotate(" + tilts[i % 4] + "deg); border: 1px solid #4F4B43; border-radius: 3px; padding: 3px 6px; font-family: 'Courier Prime', monospace; font-weight: 700; font-size: 13px; color: #4F4B43"; };
+    var works = [
+      { year: '1989', role: 'INTRODUCED', title: 'Self-explanations: how students study and use examples in learning to solve problems', who: 'Chi, Bassok, Lewis, Reimann & Glaser' },
+      { year: '1994', role: 'TESTED CAUSALLY', title: 'Eliciting self-explanations improves understanding', who: 'Chi, de Leeuw, Chiu & LaVancher' },
+      { year: '2002', role: 'APPLIED IN TUTORS', title: 'Learning by doing and explaining with a computer-based Cognitive Tutor', who: 'Aleven & Koedinger' },
+      { year: '2026', role: 'EXTENDED · TIMING', title: 'Explain-first prompting and delayed transfer in an algebra tutor', who: 'Alvarez et al. · STK 2026.0412' }
+    ];
+    return {
+      askOpen: this.state.ask, askExpanded: this.state.ask ? 'true' : 'false', toggleAsk: function () { self.setState({ ask: !self.state.ask }); },
+      works: works.map(function (w, i) { return Object.assign({}, w, { yearStyle: ys(i) }); }),
+      questions: [
+        { q: 'Does explaining before feedback improve transfer?', meta: 'CENTRAL · 9 FINDINGS' },
+        { q: 'How should worked examples be sequenced and faded?', meta: 'MENTIONED · 12 FINDINGS' },
+        { q: 'Do hint limits push students to reason on their own?', meta: 'MENTIONED · 7 FINDINGS' },
+        { q: 'How does learner agency change with adaptive systems?', meta: 'MENTIONED · 3 FINDINGS' }
+      ],
+      related: [
+        { rel: 'BROADER', name: 'Generative learning' },
+        { rel: 'OFTEN PAIRED WITH', name: 'Worked examples' },
+        { rel: 'CONTRASTED WITH', name: 'Instructional explanations' },
+        { rel: 'MEASURED WITH', name: 'Delayed transfer test' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

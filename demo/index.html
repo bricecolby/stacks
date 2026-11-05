@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stacks — screen mockups</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&amp;family=Libre+Caslon+Text:wght@400;700&amp;family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #F5F2EC; color: #1E1C19; font-family: 'Public Sans', system-ui, sans-serif; }
+  a { color: #1F4E8C; } a:hover { color: #123462; }
+  main { max-width: 1100px; margin: 0 auto; padding: 40px 24px 80px; display: flex; flex-direction: column; gap: 36px; }
+  header h1 { margin: 0 0 8px; font-family: 'Libre Caslon Text', Georgia, serif; font-weight: 400; font-size: clamp(30px, 4vw, 40px); }
+  header p { margin: 0; font-size: 16px; line-height: 1.6; color: #35322C; max-width: 720px; }
+  .label { font-family: 'Courier Prime', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; color: #5E5950; }
+  h2 { margin: 0 0 12px; font-size: 20px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
+  .card { background: #FFFDF9; border: 1px solid #E5E0D6; border-top: 2px solid #C0392B; border-radius: 6px; padding: 14px 16px; display: flex; flex-direction: column; gap: 6px; }
+  .card a.main { font-size: 16px; font-weight: 600; text-decoration: none; color: #1E1C19; min-height: 24px; }
+  .card a.main:hover { text-decoration: underline; }
+  .call { font-family: 'Courier Prime', monospace; font-size: 12px; color: #4F4B43; }
+  .tweaks { font-size: 13px; color: #4F4B43; display: flex; flex-wrap: wrap; gap: 4px 10px; }
+  .note { font-size: 14px; color: #4F4B43; line-height: 1.6; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <span class="label">STACKS · DEMO · MOCKUPS v0.3</span>
+    <h1>Screen mockups</h1>
+    <p>Clickable mockups of all 28 screens, exported from the design canvas on Nov 5, 2026. Links between screens work, and so do the drawer menus and the “Ask the desk” panel. Screens with variants (tweaks) list them under the title.</p>
+  </header>
+
+  <section>
+    <h2>Reading screens (R1–R12)</h2>
+    <p class="note" style="margin:0 0 12px">Open to everyone.</p>
+    <div class="grid">
+      <div class="card"><span class="call">R1</span><a class="main" href="R01-Home.dc.html">Home</a><span class="tweaks">View: <a href="R01-Home.dc.html?view=Signed%20in">Signed in</a><a href="R01-Home.dc.html?view=Visitor">Visitor</a></span></div>
+      <div class="card"><span class="call">R2</span><a class="main" href="R02-Ask.dc.html">Ask</a><span class="tweaks">Result: <a href="R02-Ask.dc.html?result=Matches%20a%20question">Matched</a><a href="R02-Ask.dc.html?result=New%20question%20drafted">Drafted</a><a href="R02-Ask.dc.html?result=Declined">Declined</a></span></div>
+      <div class="card"><span class="call">R3</span><a class="main" href="R03-Questions.dc.html">Question browser</a></div>
+      <div class="card"><span class="call">R4</span><a class="main" href="R04-Question.dc.html">Question page</a></div>
+      <div class="card"><span class="call">R5</span><a class="main" href="R05-Lineage.dc.html">Reading path</a><span class="tweaks">Source: <a href="R05-Lineage.dc.html?source=Curated">Curated</a><a href="R05-Lineage.dc.html?source=Generated">Generated</a></span></div>
+      <div class="card"><span class="call">R6</span><a class="main" href="R06-Record.dc.html">Record page</a><span class="tweaks">State: <a href="R06-Record.dc.html?state=Current">Current</a><a href="R06-Record.dc.html?state=Corrected">Corrected</a><a href="R06-Record.dc.html?state=Retracted">Retracted</a></span></div>
+      <div class="card"><span class="call">R7</span><a class="main" href="R07-Finding.dc.html">Finding detail</a></div>
+      <div class="card"><span class="call">R8</span><a class="main" href="R08-Concept.dc.html">Concept page</a></div>
+      <div class="card"><span class="call">R9</span><a class="main" href="R09-Profile.dc.html">Researcher profile</a></div>
+      <div class="card"><span class="call">R10</span><a class="main" href="R10-Field.dc.html">Fields (directory + field home)</a></div>
+      <div class="card"><span class="call">R11</span><a class="main" href="R11-Directions.dc.html">Research directions</a></div>
+      <div class="card"><span class="call">R12</span><a class="main" href="R12-Compare.dc.html">Compare readings + challenge thread</a></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contributing screens (C1–C9)</h2>
+    <p class="note" style="margin:0 0 12px">Need ORCID sign-in.</p>
+    <div class="grid">
+      <div class="card"><span class="call">C1</span><a class="main" href="C01-SignIn.dc.html">Sign in and first visit</a></div>
+      <div class="card"><span class="call">C2</span><a class="main" href="C02-Deposit.dc.html">Submit: deposit</a></div>
+      <div class="card"><span class="call">C3</span><a class="main" href="C03-Confirm.dc.html">Submit: confirm findings</a></div>
+      <div class="card"><span class="call">C4</span><a class="main" href="C04-Fit.dc.html">Submit: see where it fits</a></div>
+      <div class="card"><span class="call">C5</span><a class="main" href="C05-Claim.dc.html">Claim a record</a></div>
+      <div class="card"><span class="call">C6</span><a class="main" href="C06-Review.dc.html">Write a review</a></div>
+      <div class="card"><span class="call">C7</span><a class="main" href="C07-Response.dc.html">Author response</a></div>
+      <div class="card"><span class="call">C8</span><a class="main" href="C08-MyStacks.dc.html">My Stacks overview</a></div>
+      <div class="card"><span class="call">C9</span><a class="main" href="C09-Follows.dc.html">Follow and digest settings</a></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Curation and admin screens (A1–A7)</h2>
+    <div class="grid">
+      <div class="card"><span class="call">A1</span><a class="main" href="A01-AuditQueue.dc.html">Audit queue</a></div>
+      <div class="card"><span class="call">A2</span><a class="main" href="A02-AuditItem.dc.html">Audit item</a></div>
+      <div class="card"><span class="call">A3</span><a class="main" href="A03-QuestionEditor.dc.html">Question editor</a></div>
+      <div class="card"><span class="call">A4</span><a class="main" href="A04-Moderation.dc.html">Moderation queue</a></div>
+      <div class="card"><span class="call">A5</span><a class="main" href="A05-FieldSettings.dc.html">Field settings</a></div>
+      <div class="card"><span class="call">A6</span><a class="main" href="A06-ModelRuns.dc.html">Model runs and evaluation</a></div>
+      <div class="card"><span class="call">A7</span><a class="main" href="A07-Ingestion.dc.html">Ingestion status</a></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Style explorations (v1–v3)</h2>
+    <p class="note" style="margin:0 0 12px">Earlier rounds, kept for reference. v0.3 is the chosen direction.</p>
+    <div class="grid">
+      <div class="card"><span class="call">v3</span><a class="main" href="StyleV3.dc.html">Style sheet (warm neutral, stamp options)</a></div>
+      <div class="card"><span class="call">v3</span><a class="main" href="RecordV3.dc.html">Record page (stacked pile / single stamp)</a></div>
+      <div class="card"><span class="call">v2</span><a class="main" href="Style.dc.html">Card catalog style sheet</a></div>
+      <div class="card"><span class="call">v2</span><a class="main" href="RecordV2.dc.html">Record page (card catalog)</a></div>
+      <div class="card"><span class="call">v1</span><a class="main" href="Main.dc.html">Home — what changed</a><span class="tweaks">Accent: <a href="Main.dc.html?accent=%233341A8">Blue</a><a href="Main.dc.html?accent=%230A5A55">Teal</a><a href="Main.dc.html?accent=%2314171F">Ink</a><a href="Main.dc.html?accent=%237A3B12">Rust</a></span></div>
+      <div class="card"><span class="call">v1</span><a class="main" href="Question.dc.html">Living question page</a></div>
+      <div class="card"><span class="call">v1</span><a class="main" href="Record.dc.html">Research package record</a></div>
+      <div class="card"><span class="call">v1</span><a class="main" href="Profile.dc.html">Researcher profile — contributions</a></div>
+    </div>
+  </section>
+</main>
+</body>
+</html>

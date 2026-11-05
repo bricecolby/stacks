@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Stacks — researcher profile</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F6F7F9}
+a{color:#3341A8}a:hover{color:#1F2A7A}
+</style>
+</helmet>
+<div style="font-family: Inter, system-ui, sans-serif; color: #14171F; background: #F6F7F9; min-height: 100vh">
+
+  <header style="background: #FFFFFF; border-bottom: 1px solid #DDE0E7">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 16px 32px; display: flex; flex-wrap: wrap; align-items: center; gap: 24px">
+      <a href="Main.dc.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #14171F">
+        <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect x="3" y="4" width="22" height="4" rx="1" fill="#3341A8"></rect><rect x="3" y="12" width="22" height="4" rx="1" fill="#14171F"></rect><rect x="3" y="20" width="22" height="4" rx="1" fill="#14171F"></rect></svg>
+        <span style="font-family: Newsreader, Georgia, serif; font-size: 26px; font-weight: 600; letter-spacing: -0.01em">Stacks</span>
+      </a>
+      <nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 20px; font-size: 15px; flex: 1 1 auto">
+        <a href="Question.dc.html" style="color: #14171F; text-decoration: none">Questions</a>
+        <a href="Record.dc.html" style="color: #14171F; text-decoration: none">Records</a>
+        <a href="#" style="color: #14171F; text-decoration: none">Open reviews</a>
+        <a href="#" style="color: #14171F; text-decoration: none">Reference desk</a>
+        <a href="#" style="color: #14171F; text-decoration: none">For editors</a>
+      </nav>
+      <span style="font-size: 12px; font-weight: 500; color: #4A5163; border: 1px dashed #A9AFBD; border-radius: 999px; padding: 4px 10px">Concept · sample content</span>
+      <a href="Profile.dc.html" style="font-size: 15px; color: #3341A8; text-decoration: none; font-weight: 600">My contributions</a>
+    </div>
+  </header>
+
+  <div style="max-width: 1200px; margin: 0 auto; padding: 48px 32px 80px; display: flex; flex-direction: column; gap: 40px">
+
+    <section style="display: flex; flex-wrap: wrap; gap: 28px; align-items: center">
+      <div aria-hidden="true" style="width: 96px; height: 96px; border-radius: 999px; background: #E8EAF8; display: flex; align-items: center; justify-content: center; font-family: Newsreader, Georgia, serif; font-size: 36px; color: #3341A8; flex: none">RA</div>
+      <div style="flex: 1 1 420px; display: flex; flex-direction: column; gap: 8px">
+        <h1 style="margin: 0; font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: 44px; letter-spacing: -0.01em">R. Alvarez</h1>
+        <p style="margin: 0; font-size: 17px; color: #3A4050">Assistant Professor, Instructional Technology · [University]</p>
+        <p style="margin: 0; font-size: 15px; color: #4A5163">Works on adaptive tutoring, self-explanation, and learner agency</p>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px">
+        <a href="#" style="font-size: 14px; font-weight: 500; padding: 12px 16px; border-radius: 8px; background: #14171F; color: #FFFFFF; text-decoration: none">Export tenure dossier</a>
+        <a href="#" style="font-size: 14px; font-weight: 500; padding: 12px 16px; border-radius: 8px; border: 1px solid #14171F; color: #14171F; text-decoration: none">Full record list</a>
+      </div>
+    </section>
+
+    <section style="background: #FFFFFF; border: 1px solid #DDE0E7; border-radius: 14px; padding: 18px 22px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; font-size: 14px; color: #3A4050">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3341A8" stroke-width="2" aria-hidden="true" style="flex: none"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><circle cx="12" cy="7.5" r="0.5"></circle></svg>
+      <span style="flex: 1 1 400px">No paper count or impact score. Every entry below links to the record or the maintained conclusion that earned it.</span>
+    </section>
+
+    <section>
+      <h2 style="margin: 0 0 6px; font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: 34px">Signature contributions</h2>
+      <p style="margin: 0 0 20px; font-size: 15px; color: #4A5163">The unit is the contribution, not the paper. One contribution can span a framework, a dataset, a system, and several studies.</p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 20px">
+        <sc-for list="{{sig}}" as="s" hint-placeholder-count="3">
+          <article style="background: #FFFFFF; border: 1px solid #DDE0E7; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 14px">
+            <div style="display: flex; justify-content: space-between; gap: 12px; align-items: baseline">
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #4A5163">{{s.n}}</span>
+              <span style="{{s.badge}}">{{s.status}}</span>
+            </div>
+            <h3 style="margin: 0; font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: 24px; line-height: 1.3">{{s.title}}</h3>
+            <dl style="margin: 0; display: flex; flex-direction: column; gap: 10px; font-size: 14px; line-height: 1.5">
+              <div><dt style="font-weight: 600; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: #4A5163">Problem</dt><dd style="margin: 2px 0 0">{{s.problem}}</dd></div>
+              <div><dt style="font-weight: 600; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: #4A5163">Now possible</dt><dd style="margin: 2px 0 0">{{s.now}}</dd></div>
+              <div><dt style="font-weight: 600; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: #4A5163">My role</dt><dd style="margin: 2px 0 0">{{s.role}}</dd></div>
+              <div><dt style="font-weight: 600; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: #4A5163">Independent uptake</dt><dd style="margin: 2px 0 0">{{s.uptake}}</dd></div>
+              <div><dt style="font-weight: 600; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: #4A5163">Limits</dt><dd style="margin: 2px 0 0">{{s.limits}}</dd></div>
+            </dl>
+            <a href="Record.dc.html" style="margin-top: auto; font-size: 14px">{{s.link}}</a>
+          </article>
+        </sc-for>
+      </div>
+    </section>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start">
+      <section style="flex: 999 1 560px; min-width: 0; background: #FFFFFF; border: 1px solid #DDE0E7; border-radius: 16px; padding: 26px">
+        <h2 style="margin: 0 0 4px; font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: 28px">Contributions to maintained knowledge</h2>
+        <p style="margin: 0 0 16px; font-size: 14px; color: #4A5163">Instead of “who cited this,” the record shows which conclusions this work supports, qualifies, or overturns.</p>
+        <ul style="list-style: none; margin: 0; padding: 0">
+          <sc-for list="{{kc}}" as="k" hint-placeholder-count="5">
+            <li style="display: flex; flex-wrap: wrap; gap: 8px 16px; padding: 14px 0; border-bottom: 1px solid #ECEEF2; align-items: flex-start">
+              <span style="{{k.badge}}">{{k.kind}}</span>
+              <span style="flex: 999 1 320px; min-width: 0; font-size: 15px; line-height: 1.5">{{k.text}}</span>
+            </li>
+          </sc-for>
+        </ul>
+      </section>
+
+      <section style="flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+        <div style="background: #FFFFFF; border: 1px solid #DDE0E7; border-radius: 16px; padding: 22px">
+          <h2 style="margin: 0 0 12px; font-size: 16px; font-weight: 600">Capacity building</h2>
+          <ul style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 10px; font-size: 14px; line-height: 1.5; color: #3A4050">
+            <li>Mentored 4 graduate students, 2 of whom lead their own records</li>
+            <li>Maintains the open transfer-test item bank used by 3 teams</li>
+            <li>Partnership with the Westlake district for classroom studies</li>
+          </ul>
+        </div>
+        <div style="background: #FFFFFF; border: 1px solid #DDE0E7; border-radius: 16px; padding: 22px">
+          <h2 style="margin: 0 0 12px; font-size: 16px; font-weight: 600">Review &amp; stewardship</h2>
+          <ul style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 10px; font-size: 14px; line-height: 1.5; color: #3A4050">
+            <li>Question editor, “Measuring learner agency” (credited role, 2026–2028)</li>
+            <li>9 open reviews, 2 cited by authors as changing their analysis</li>
+            <li>1 registered replication in progress</li>
+          </ul>
+        </div>
+        <div style="background: #E8EAF8; border-radius: 16px; padding: 22px; font-size: 14px; line-height: 1.55; color: #1F2A7A">
+          <strong>For evaluators:</strong> each contribution includes a contribution statement, its validation history, and links to independent uptake. You can ask the reference desk to walk you through any of them.
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2200}}'>
+class Component extends DCLogic {
+  renderVals() {
+    var b = function (fg, bg) { return 'align-self: flex-start; display: inline-block; font-size: 12px; font-weight: 600; padding: 5px 9px; border-radius: 6px; white-space: nowrap; color: ' + fg + '; background: ' + bg; };
+    return {
+      sig: [
+        { n: '01', status: 'Replicated', badge: b('#1B4F9C', '#E2ECFA'), title: 'Explain-first prompting for AI tutors', problem: 'AI tutors raised immediate scores but didn’t reliably build independent reasoning.', now: 'A tested design rule, with explanation before feedback, now built into the field’s answer on AI tutoring.', role: 'Framed the question, designed the condition and failure criteria, led the program across 3 studies.', uptake: 'Replicated by an independent team. Adopted in two open-source tutor frameworks.', limits: 'Established for math only. Retention beyond two weeks is unknown.', link: 'STK-2026-0412 and 2 related records' },
+        { n: '02', status: 'Preliminary', badge: b('#7A4E00', '#FDF0D5'), title: 'An observation protocol for learner agency', problem: 'Agency was measured almost entirely through self-report.', now: 'Classroom observers can code agency moves reliably from video or live sessions.', role: 'Developed the coding scheme and training materials. Collaborators led data collection.', uptake: 'Two teams are piloting it. One reliability study is under open review.', limits: 'Validated in secondary classrooms only.', link: 'Method package STK-2026-0188' },
+        { n: '03', status: 'Well-supported', badge: b('#0A5A55', '#DBF0EC'), title: 'Open transfer-test item bank', problem: 'AI tutoring studies used incomparable outcome measures.', now: 'Studies can report delayed transfer on shared, validated items, which lets syntheses compare them.', role: 'Designed the bank and validation study, and maintains releases.', uptake: 'Used in 7 records from 3 independent groups.', limits: 'Algebra and pre-algebra only so far.', link: 'Dataset STK-2025-0931' }
+      ],
+      kc: [
+        { kind: 'Changed an answer', badge: b('#7A4E00', '#FDF0D5'), text: 'Qualified the answer on AI tutoring and independent reasoning (v3.2) by adding the explain-first condition.' },
+        { kind: 'Supplied a method', badge: b('#1B4F9C', '#E2ECFA'), text: 'The transfer-test item bank is now the recommended outcome measure in 2 living questions.' },
+        { kind: 'Identified a limit', badge: b('#6A2C8E', '#F2E6F9'), text: 'Showed that a popular hint-on-demand design didn’t improve delayed performance. Recommendation revised.' },
+        { kind: 'Data reused', badge: b('#0A5A55', '#DBF0EC'), text: 'Trial data reused by an independent team for the robustness check that raised the status to Replicated.' },
+        { kind: 'Review', badge: b('#4A5163', '#ECEEF2'), text: 'An open review of an LLM-scoring package identified a measurement problem that the authors fixed in v2.' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

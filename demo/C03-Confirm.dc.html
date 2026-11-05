@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Stacks — C3 Submit: confirm findings</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&amp;family=Libre+Caslon+Text:wght@400;700&amp;family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F5F2EC}
+a{color:#1F4E8C}a:hover{color:#123462}
+/*stk-nav*/.drw{position:relative}.drw>summary{list-style:none;cursor:pointer}.drw>summary::-webkit-details-marker{display:none}
+.drw-menu{display:none !important}.drw[open] .drw-menu{display:flex !important}
+@media (hover: hover){.drw:hover .drw-menu{display:flex !important}.drw-front:hover{transform:translateY(1px)}}
+.bell:hover svg{transform:rotate(-8deg)}/*end-stk-nav*/
+</style>
+</helmet>
+<div style="font-family: 'Public Sans', system-ui, sans-serif; color: #1E1C19; background: #F5F2EC; min-height: 100vh">
+
+  <header style="background: #FFFDF9; border-bottom: 1px solid #CFC9BD; position: relative; z-index: 20">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 10px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 24px; min-height: 68px; box-sizing: border-box">
+      <a href="R01-Home.dc.html" style="font-family: 'Libre Caslon Text', Georgia, serif; font-size: 26px; color: #1E1C19; text-decoration: none; display: inline-flex; align-items: center; gap: 10px">
+        <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><rect x="2" y="4" width="18" height="14" rx="1.5" fill="none" stroke="#1E1C19" stroke-width="1.6"></rect><line x1="2" y1="8" x2="20" y2="8" stroke="#C0392B" stroke-width="1.6"></line><circle cx="11" cy="15" r="1.4" fill="#1E1C19"></circle></svg>
+        Stacks
+      </a>
+      <nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 8px; flex: 1 1 auto; align-items: center">
+        <a class="drw-front" href="R01-Home.dc.html" style="background: #FFFDF9; border: 1px solid #E5E0D6; box-shadow: 0 1px 0 #E5E0D6; border-radius: 4px; padding: 6px 12px 5px; min-height: 44px; box-sizing: border-box; color: #1E1C19; display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; transition: transform 120ms; text-decoration: none"><span style="border: 1px solid #CFC9BD; border-radius: 2px; padding: 2px 10px; background: #FFFDF9; font-size: 14.5px; font-weight: 600; line-height: 1.3; white-space: nowrap; display: inline-flex; align-items: center">Home</span><span aria-hidden="true" style="width: 20px; height: 4px; border-radius: 3px; background: #CFC9BD"></span></a>
+        <details class="drw"><summary class="drw-front" aria-label="Explore menu" style="background: #FFFDF9; border: 1px solid #E5E0D6; box-shadow: 0 1px 0 #E5E0D6; border-radius: 4px; padding: 6px 12px 5px; min-height: 44px; box-sizing: border-box; color: #1E1C19; display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; transition: transform 120ms"><span style="border: 1px solid #CFC9BD; border-radius: 2px; padding: 2px 10px; background: #FFFDF9; font-size: 14.5px; font-weight: 600; line-height: 1.3; white-space: nowrap; display: inline-flex; align-items: center">Explore<span aria-hidden="true" style="font-size: 10px; color: #5E5950; margin-left: 4px">▾</span></span><span aria-hidden="true" style="width: 20px; height: 4px; border-radius: 3px; background: #CFC9BD"></span></summary><div class="drw-menu" style="position: absolute; left: 0; top: 100%; z-index: 30; min-width: 230px; flex-direction: column; background: #FFFDF9; border: 1px solid #CFC9BD; border-radius: 4px; box-shadow: 0 10px 22px rgba(40,32,20,0.16)"><span style="padding: 7px 12px 5px; font-family: 'Courier Prime', monospace; font-size: 11px; letter-spacing: 0.1em; color: #5E5950">IN THIS DRAWER</span><a href="R10-Field.dc.html" style="display: flex; flex-direction: column; gap: 1px; padding: 8px 12px; border-top: 1px solid #EEEAE2; text-decoration: none; color: #1E1C19; min-height: 44px; box-sizing: border-box"><span style="font-size: 14.5px; font-weight: 600">Fields</span><span style="font-family: 'Courier Prime', monospace; font-size: 10.5px; letter-spacing: 0.08em; color: #5E5950">BY DISCIPLINE</span></a><a href="R03-Questions.dc.html" style="display: flex; flex-direction: column; gap: 1px; padding: 8px 12px; border-top: 1px solid #EEEAE2; text-decoration: none; color: #1E1C19; min-height: 44px; box-sizing: border-box"><span style="font-size: 14.5px; font-weight: 600">Questions</span><span style="font-family: 'Courier Prime', monospace; font-size: 10.5px; letter-spacing: 0.08em; color: #5E5950">ANSWERS + EVIDENCE</span></a><a href="R11-Directions.dc.html" style="display: flex; flex-direction: column; gap: 1px; padding: 8px 12px; border-top: 1px solid #EEEAE2; text-decoration: none; color: #1E1C19; min-height: 44px; box-sizing: border-box"><span style="font-size: 14.5px; font-weight: 600">Research directions</span><span style="font-family: 'Courier Prime', monospace; font-size: 10.5px; letter-spacing: 0.08em; color: #5E5950">OPEN PROBLEMS</span></a></div></details>
+        <details class="drw"><summary class="drw-front" aria-label="My Stacks menu (current section)" style="background: #F5F2EC; border: 1px solid #4F4B43; box-shadow: 0 3px 0 #CFC9BD, inset 0 1px 0 #FFFDF9; transform: translateY(-1px); border-radius: 4px; padding: 6px 12px 5px; min-height: 44px; box-sizing: border-box; color: #1E1C19; display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; transition: transform 120ms"><span style="border: 1px solid #1E1C19; border-radius: 2px; padding: 2px 10px; background: #FFFDF9; font-size: 14.5px; font-weight: 700; line-height: 1.3; white-space: nowrap; display: inline-flex; align-items: center">My Stacks<span aria-hidden="true" style="font-size: 10px; color: #5E5950; margin-left: 4px">▾</span></span><span aria-hidden="true" style="width: 20px; height: 4px; border-radius: 3px; background: #4F4B43"></span></summary><div class="drw-menu" style="position: absolute; left: 0; top: 100%; z-index: 30; min-width: 230px; flex-direction: column; background: #FFFDF9; border: 1px solid #CFC9BD; border-radius: 4px; box-shadow: 0 10px 22px rgba(40,32,20,0.16)"><span style="padding: 7px 12px 5px; font-family: 'Courier Prime', monospace; font-size: 11px; letter-spacing: 0.1em; color: #5E5950">IN THIS DRAWER</span><a href="C08-MyStacks.dc.html" style="display: flex; flex-direction: column; gap: 1px; padding: 8px 12px; border-top: 1px solid #EEEAE2; text-decoration: none; color: #1E1C19; min-height: 44px; box-sizing: border-box"><span style="font-size: 14.5px; font-weight: 600">Overview</span><span style="font-family: 'Courier Prime', monospace; font-size: 10.5px; letter-spacing: 0.08em; color: #5E5950">START HERE</span></a><a href="C02-Deposit.dc.html" aria-current="page" style="display: flex; flex-direction: column; gap: 1px; padding: 8px 12px; border-top: 1px solid #EEEAE2; text-decoration: none; color: #1E1C19; min-height: 44px; box-sizing: border-box; background: #F5F2EC; box-shadow: inset 3px 0 0 #1E1C19"><span style="font-size: 14.5px; font-weight: 700">Deposit</span><span style="font-family: 'Courier Prime', monospace; font-size: 10.5px; letter-spacing: 0.08em; color: #5E5950">SUBMIT WORK</span></a><a href="C05-Claim.dc.html" style="display: flex; flex-direction: column; gap: 1px; padding: 8px 12px; border-top: 1px solid #EEEAE2; text-decoration: none; color: #1E1C19; min-height: 44px; box-sizing: border-box"><span style="font-size: 14.5px; font-weight: 600">Claim records</span><span style="font-family: 'Courier Prime', monospace; font-size: 10.5px; letter-spacing: 0.08em; color: #5E5950">YOUR INDEXED WORK</span></a><a href="C07-Response.dc.html" style="display: flex; flex-direction: column; gap: 1px; padding: 8px 12px; border-top: 1px solid #EEEAE2; text-decoration: none; color: #1E1C19; min-height: 44px; box-sizing: border-box"><span style="font-size: 14.5px; font-weight: 600">Reviews</span><span style="font-family: 'Courier Prime', monospace; font-size: 10.5px; letter-spacing: 0.08em; color: #5E5950">GIVE + ANSWER</span></a><a href="C09-Follows.dc.html" style="display: flex; flex-direction: column; gap: 1px; padding: 8px 12px; border-top: 1px solid #EEEAE2; text-decoration: none; color: #1E1C19; min-height: 44px; box-sizing: border-box"><span style="font-size: 14.5px; font-weight: 600">Following</span><span style="font-family: 'Courier Prime', monospace; font-size: 10.5px; letter-spacing: 0.08em; color: #5E5950">DIGEST + ALERTS</span></a></div></details>
+        <details class="drw"><summary class="drw-front" aria-label="Curation menu" style="background: #FFFDF9; border: 1px solid #E5E0D6; box-shadow: 0 1px 0 #E5E0D6; border-radius: 4px; padding: 6px 12px 5px; min-height: 44px; box-sizing: border-box; color: #1E1C19; display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; transition: transform 120ms"><span style="border: 1px solid #CFC9BD; border-radius: 2px; padding: 2px 10px; background: #FFFDF9; font-size: 14.5px; font-weight: 600; line-height: 1.3; white-space: nowrap; display: inline-flex; align-items: center">Curation<span aria-hidden="true" style="font-size: 10px; color: #5E5950; margin-left: 4px">▾</span></span><span aria-hidden="true" style="width: 20px; height: 4px; border-radius: 3px; background: #CFC9BD"></span></summary><div class="drw-menu" style="position: absolute; left: 0; top: 100%; z-index: 30; min-width: 230px; flex-direction: column; background: #FFFDF9; border: 1px solid #CFC9BD; border-radius: 4px; box-shadow: 0 10px 22px rgba(40,32,20,0.16)"><span style="padding: 7px 12px 5px; font-family: 'Courier Prime', monospace; font-size: 11px; letter-spacing: 0.1em; color: #5E5950">IN THIS DRAWER</span><a href="A01-AuditQueue.dc.html" style="display: flex; flex-direction: column; gap: 1px; padding: 8px 12px; border-top: 1px solid #EEEAE2; text-decoration: none; color: #1E1C19; min-height: 44px; box-sizing: border-box"><span style="font-size: 14.5px; font-weight: 600">Audit queue</span><span style="font-family: 'Courier Prime', monospace; font-size: 10.5px; letter-spacing: 0.08em; color: #5E5950">CHECK THE AI</span></a><a href="A03-QuestionEditor.dc.html" style="display: flex; flex-direction: column; gap: 1px; padding: 8px 12px; border-top: 1px solid #EEEAE2; text-decoration: none; color: #1E1C19; min-height: 44px; box-sizing: border-box"><span style="font-size: 14.5px; font-weight: 600">My questions</span><span style="font-family: 'Courier Prime', monospace; font-size: 10.5px; letter-spacing: 0.08em; color: #5E5950">STEWARDING</span></a><a href="A04-Moderation.dc.html" style="display: flex; flex-direction: column; gap: 1px; padding: 8px 12px; border-top: 1px solid #EEEAE2; text-decoration: none; color: #1E1C19; min-height: 44px; box-sizing: border-box"><span style="font-size: 14.5px; font-weight: 600">Moderation</span><span style="font-family: 'Courier Prime', monospace; font-size: 10.5px; letter-spacing: 0.08em; color: #5E5950">FLAGS + APPEALS</span></a><a href="A05-FieldSettings.dc.html" style="display: flex; flex-direction: column; gap: 1px; padding: 8px 12px; border-top: 1px solid #EEEAE2; text-decoration: none; color: #1E1C19; min-height: 44px; box-sizing: border-box"><span style="font-size: 14.5px; font-weight: 600">Field settings</span><span style="font-family: 'Courier Prime', monospace; font-size: 10.5px; letter-spacing: 0.08em; color: #5E5950">TYPES + WEIGHTS</span></a><a href="A06-ModelRuns.dc.html" style="display: flex; flex-direction: column; gap: 1px; padding: 8px 12px; border-top: 1px solid #EEEAE2; text-decoration: none; color: #1E1C19; min-height: 44px; box-sizing: border-box"><span style="font-size: 14.5px; font-weight: 600">Model runs</span><span style="font-family: 'Courier Prime', monospace; font-size: 10.5px; letter-spacing: 0.08em; color: #5E5950">EVALUATION</span></a><a href="A07-Ingestion.dc.html" style="display: flex; flex-direction: column; gap: 1px; padding: 8px 12px; border-top: 1px solid #EEEAE2; text-decoration: none; color: #1E1C19; min-height: 44px; box-sizing: border-box"><span style="font-size: 14.5px; font-weight: 600">Ingestion</span><span style="font-family: 'Courier Prime', monospace; font-size: 10.5px; letter-spacing: 0.08em; color: #5E5950">HARVESTERS</span></a></div></details>
+      </nav>
+      <div style="display: flex; align-items: center; gap: 12px">
+        <button class="bell" type="button" onClick="{{toggleAsk}}" aria-expanded="{{askExpanded}}" style="font-family: 'Public Sans', sans-serif; font-size: 14px; font-weight: 600; min-height: 44px; padding: 8px 14px 8px 10px; border-radius: 999px; border: 1px solid #1E1C19; background: #1E1C19; color: #FFFDF9; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 2px 0 #CFC9BD"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" style="transition: transform 120ms"><path d="M4 18h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path><path d="M6 17.5a6 6 0 0 1 12 0" fill="none" stroke="currentColor" stroke-width="1.8"></path><path d="M12 9V7.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path><circle cx="12" cy="6.2" r="1.3" fill="currentColor"></circle><path d="M3 20.5h18" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.5"></path></svg><span>Ask the desk</span></button>
+        <a href="C08-MyStacks.dc.html" aria-label="Your account: R. Alvarez" style="width: 44px; height: 44px; border-radius: 999px; background: #EEEAE2; border: 1px solid #E5E0D6; display: inline-flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; color: #1E1C19; text-decoration: none; box-sizing: border-box">RA</a>
+      </div>
+    </div>
+  </header>
+
+  <div style="max-width: 1000px; margin: 0 auto; padding: 28px 24px 80px; display: flex; flex-direction: column; gap: 24px">
+    <sc-if value="{{askOpen}}" hint-placeholder-val="{{ false }}">
+      <section aria-label="Reference desk" style="background: #FFFDF9; border: 1px solid #E5E0D6; border-radius: 8px; padding: 18px 20px; display: flex; flex-direction: column; gap: 10px">
+        <label for="ask" style="font-size: 15px; font-weight: 600">Ask about these findings</label>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px">
+          <input id="ask" type="text" placeholder="e.g., Why was finding 3 split from finding 2?" style="flex: 1 1 280px; min-width: 0; font: inherit; font-size: 16px; padding: 12px 14px; border: 1px solid #CFC9BD; border-radius: 6px; background: #FFFDF9; color: #1E1C19">
+          <a href="R02-Ask.dc.html" style="font-size: 15px; font-weight: 600; min-height: 44px; padding: 10px 18px; border-radius: 6px; background: #1E1C19; color: #FFFDF9; text-decoration: none; display: inline-flex; align-items: center; box-sizing: border-box">Ask</a>
+        </div>
+        <span style="font-size: 13px; color: #5E5950">Answers come from what you're looking at and the questions it links to, with every claim traced. <a href="R02-Ask.dc.html">Open the full reference desk</a></span>
+      </section>
+    </sc-if>
+    <ol aria-label="Deposit steps" style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 24px"><li style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: #2F6B3A"><span style="width: 26px; height: 26px; border-radius: 999px; border: 1px solid #2F6B3A; display: inline-flex; align-items: center; justify-content: center; font-size: 13px">✓</span><a href="C02-Deposit.dc.html" style="color: #2F6B3A">Deposit</a></li><li aria-current="step" style="display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700; color: #1E1C19"><span style="width: 26px; height: 26px; border-radius: 999px; background: #1E1C19; color: #FFFDF9; display: inline-flex; align-items: center; justify-content: center; font-family: 'Courier Prime', monospace; font-size: 13px">2</span>Confirm findings</li><li style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: #5E5950"><span style="width: 26px; height: 26px; border-radius: 999px; border: 1px solid #CFC9BD; display: inline-flex; align-items: center; justify-content: center; font-family: 'Courier Prime', monospace; font-size: 13px">3</span>See where it fits</li><li style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: #5E5950"><span style="width: 26px; height: 26px; border-radius: 999px; border: 1px solid #CFC9BD; display: inline-flex; align-items: center; justify-content: center; font-family: 'Courier Prime', monospace; font-size: 13px">4</span>Publish</li></ol>
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; align-items: flex-end">
+      <div style="display: flex; flex-direction: column; gap: 8px; flex: 1 1 520px; min-width: 0">
+        <h1 style="margin: 0; font-size: 28px; font-weight: 700">Check what we found</h1>
+        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #35322C">Everything below is in pencil until you confirm it. You're the first auditor of your own record; edits you make help train the extraction.</p>
+      </div>
+      <span style="font-family: 'Courier Prime', monospace; font-size: 13px; color: #4F4B43">{{progress}}</span>
+    </div>
+
+    <section style="background: #FFFDF9; border: 1px solid #E5E0D6; border-radius: 6px; padding: 14px 18px; display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center">
+      <span style="font-family: 'Courier Prime', monospace; font-size: 12px; letter-spacing: 0.08em; color: #5E5950">RESEARCH TYPE</span>
+      <span style="font-size: 16px; font-weight: 600">Experimental</span>
+      <span style="font-size: 13px; color: #2F6B3A; font-weight: 500">✓ Confirmed by you</span>
+      <button type="button" style="font-family: 'Public Sans', sans-serif; font-size: 14px; min-height: 44px; padding: 6px 12px; border-radius: 6px; border: 1px dashed #ABA597; background: transparent; color: #1E1C19; cursor: pointer">Add a type (mixed methods)</button>
+      <span style="font-size: 14px; color: #4F4B43; margin-left: auto">Finding units: one per result, null result, or subgroup effect</span>
+    </section>
+
+    <sc-for list="{{findings}}" as="f" hint-placeholder-count="5">
+      <article style="{{f.cardStyle}}">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 12px; font-family: 'Courier Prime', monospace; font-size: 12px; letter-spacing: 0.06em; color: #5E5950; border-bottom: 1px solid #EEEAE2; padding-bottom: 6px">
+          <span style="font-weight: 700; color: #1E1C19">{{f.num}}</span><span>{{f.kind}}</span>
+        </div>
+        <label for="{{f.id}}" style="position: absolute; left: -9999px">Claim for {{f.num}}</label>
+        <textarea id="{{f.id}}" rows="2" style="font: inherit; font-size: 16px; line-height: 1.5; color: #1E1C19; border: 0; border-bottom: 1px solid #ABA597; background: transparent; padding: 4px 0 6px; resize: vertical" value="{{f.claim}}"></textarea>
+        <blockquote style="margin: 0; padding: 8px 12px; background: #F5F2EC; border-radius: 4px; font-size: 14px; line-height: 1.55; color: #35322C">{{f.passage}} <span style="font-family: 'Courier Prime', monospace; font-size: 12px; color: #5E5950">{{f.where}}</span></blockquote>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center">
+          <span style="{{f.noteStyle}}">{{f.note}}</span>
+          <span style="flex: 1 1 auto"></span>
+          <button type="button" onClick="{{f.confirm}}" aria-pressed="{{f.pressed}}" style="{{f.confirmStyle}}">{{f.confirmLabel}}</button>
+          <button type="button" style="font-family: 'Public Sans', sans-serif; font-size: 14px; min-height: 44px; padding: 8px 14px; border-radius: 6px; border: 1px solid #CFC9BD; background: #FFFDF9; color: #1E1C19; cursor: pointer">Split</button>
+          <button type="button" style="font-family: 'Public Sans', sans-serif; font-size: 14px; min-height: 44px; padding: 8px 14px; border-radius: 6px; border: 1px solid #CFC9BD; background: #FFFDF9; color: #A8261F; cursor: pointer">Not a finding</button>
+        </div>
+      </article>
+    </sc-for>
+
+    <button type="button" style="align-self: flex-start; font-family: 'Public Sans', sans-serif; font-size: 14px; font-weight: 600; min-height: 44px; padding: 10px 16px; border-radius: 6px; border: 1px dashed #ABA597; background: transparent; color: #1E1C19; cursor: pointer">Add a finding we missed</button>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center; border-top: 1px solid #E5E0D6; padding-top: 18px">
+      <a href="C04-Fit.dc.html" style="font-size: 15px; font-weight: 600; min-height: 44px; padding: 10px 20px; border-radius: 6px; background: #1E1C19; color: #FFFDF9; text-decoration: none; display: inline-flex; align-items: center; box-sizing: border-box">Next: see where it fits</a>
+      <span style="font-size: 13px; color: #5E5950">Anything you don't confirm stays in pencil and goes to the audit queue.</span>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2400}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { ask: false, ok: { f1: true } }; }
+  renderVals() {
+    var self = this;
+    var pencil = "font-family: 'Courier Prime', monospace; font-style: italic; font-size: 12px; color: #635E54; border: 1px dashed #ABA597; border-radius: 4px; padding: 2px 8px";
+    var conf = "font-size: 13px; color: #2F6B3A; font-weight: 500";
+    var list = [
+      { id: 'f1', num: 'FINDING 1', kind: 'NULL RESULT', claim: 'Explain-first and feedback-first students scored the same at posttest.', passage: '“Posttest scores did not differ between conditions (d = 0.02).”', where: '§4.1 · P. 12', c: 0.95 },
+      { id: 'f2', num: 'FINDING 2', kind: 'RESULT', claim: 'Explain-first students scored higher on the two-week transfer test.', passage: '“At the delayed test, explain-first students outperformed feedback-first students on transfer items (d = 0.27).”', where: '§4.2 · P. 13', c: 0.91 },
+      { id: 'f3', num: 'FINDING 3', kind: 'SUBGROUP', claim: 'The delayed advantage was larger for students with low prior knowledge.', passage: '“The interaction with pretest score was significant; the effect was concentrated among lower-scoring students.”', where: '§4.3 · P. 14', c: 0.78 },
+      { id: 'f4', num: 'FINDING 4', kind: 'RESULT', claim: 'Explain-first students asked for 30% fewer hints.', passage: '“Hint requests per problem were lower in the explain-first condition (1.4 vs. 2.0).”', where: '§4.4 · P. 15', c: 0.84 },
+      { id: 'f5', num: 'IMPLICATION', kind: 'UNTESTED', claim: 'Geometry tutors should require a written justification before showing feedback.', passage: '“Designers might consider requiring a brief justification before any feedback is shown.”', where: '§5 · P. 18', c: 0.61 }
+    ];
+    var n = list.filter(function (f) { return self.state.ok[f.id]; }).length;
+    return {
+      askOpen: this.state.ask, askExpanded: this.state.ask ? 'true' : 'false', toggleAsk: function () { self.setState({ ask: !self.state.ask }); },
+      progress: n + ' OF ' + list.length + ' CONFIRMED',
+      findings: list.map(function (f) {
+        var on = !!self.state.ok[f.id];
+        return Object.assign({}, f, {
+          cardStyle: "position: relative; background: #FFFDF9; border: 1px " + (f.kind === 'UNTESTED' ? 'dashed #ABA597' : 'solid #E5E0D6') + "; border-radius: 6px; padding: 14px 18px 16px; display: flex; flex-direction: column; gap: 10px",
+          note: on ? '✓ Confirmed by you' : 'pencilled by model · ' + f.c.toFixed(2),
+          noteStyle: on ? conf : pencil,
+          pressed: on ? 'true' : 'false',
+          confirmLabel: on ? 'Confirmed' : 'Confirm',
+          confirm: function () { var o = Object.assign({}, self.state.ok); o[f.id] = !o[f.id]; self.setState({ ok: o }); },
+          confirmStyle: "font-family: 'Public Sans', sans-serif; font-size: 14px; font-weight: 600; min-height: 44px; padding: 8px 16px; border-radius: 6px; cursor: pointer; border: 1px solid " + (on ? '#2F6B3A' : '#1E1C19') + "; background: " + (on ? '#2F6B3A' : '#1E1C19') + "; color: #FFFDF9"
+        });
+      })
+    };
+  }
+}
+</script>
+</body>
+</html>

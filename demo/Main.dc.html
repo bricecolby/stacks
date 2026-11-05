@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Stacks — home</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F6F7F9}
+a{color:#3341A8}a:hover{color:#1F2A7A}
+</style>
+</helmet>
+<div style="font-family: Inter, system-ui, sans-serif; color: #14171F; background: #F6F7F9; min-height: 100vh">
+
+  <header style="background: #FFFFFF; border-bottom: 1px solid #DDE0E7">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 16px 32px; display: flex; flex-wrap: wrap; align-items: center; gap: 24px">
+      <a href="Main.dc.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #14171F">
+        <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect x="3" y="4" width="22" height="4" rx="1" fill="#3341A8"></rect><rect x="3" y="12" width="22" height="4" rx="1" fill="#14171F"></rect><rect x="3" y="20" width="22" height="4" rx="1" fill="#14171F"></rect></svg>
+        <span style="font-family: Newsreader, Georgia, serif; font-size: 26px; font-weight: 600; letter-spacing: -0.01em">Stacks</span>
+      </a>
+      <nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 20px; font-size: 15px; flex: 1 1 auto">
+        <a href="Question.dc.html" style="color: #14171F; text-decoration: none">Questions</a>
+        <a href="Record.dc.html" style="color: #14171F; text-decoration: none">Records</a>
+        <a href="#" style="color: #14171F; text-decoration: none">Open reviews</a>
+        <a href="#" style="color: #14171F; text-decoration: none">Reference desk</a>
+        <a href="#" style="color: #14171F; text-decoration: none">For editors</a>
+      </nav>
+      <span style="font-size: 12px; font-weight: 500; color: #4A5163; border: 1px dashed #A9AFBD; border-radius: 999px; padding: 4px 10px">Concept · sample content</span>
+      <a href="Profile.dc.html" style="font-size: 15px; color: #14171F; text-decoration: none">My contributions</a>
+      <a href="Record.dc.html" style="background: {{accent}}; color: #FFFFFF; text-decoration: none; font-size: 15px; font-weight: 500; padding: 12px 18px; border-radius: 8px">Deposit a package</a>
+    </div>
+  </header>
+
+  <section style="background: #FFFFFF; border-bottom: 1px solid #DDE0E7">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 80px 32px 72px; display: flex; flex-direction: column; gap: 24px">
+      <p style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: {{accent}}">A living knowledge base for learning science</p>
+      <h1 style="margin: 0; font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: clamp(40px, 6vw, 72px); line-height: 1.05; letter-spacing: -0.02em; max-width: 900px">Don’t read 47 new papers.<br>See what the field now knows differently.</h1>
+      <p style="margin: 0; font-size: 19px; line-height: 1.55; color: #4A5163; max-width: 720px">Researchers publish open research packages. Reviewers test them in public. Editors keep living answers to the field’s important questions, and every answer traces back to the people whose work supports it.</p>
+      <form role="search" style="display: flex; flex-wrap: wrap; gap: 12px; max-width: 760px; margin-top: 8px">
+        <label for="q" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Ask a research question</label>
+        <input id="q" type="search" placeholder="Ask a research question, e.g. “When do AI tutors help students reason on their own?”" style="flex: 1 1 380px; min-width: 0; font: inherit; font-size: 16px; padding: 16px 18px; border: 1px solid #A9AFBD; border-radius: 10px; background: #FFFFFF; color: #14171F">
+        <button type="submit" style="font: inherit; font-size: 16px; font-weight: 500; padding: 16px 22px; border-radius: 10px; border: 0; background: #14171F; color: #FFFFFF; cursor: pointer">Ask the reference desk</button>
+      </form>
+      <p style="margin: 0; font-size: 14px; color: #4A5163">Answers come from maintained syntheses, not from what a model memorized. Every claim links to its studies.</p>
+    </div>
+  </section>
+
+  <section style="max-width: 1200px; margin: 0 auto; padding: 72px 32px 24px">
+    <h2 style="margin: 0 0 8px; font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: 36px; letter-spacing: -0.01em">How Stacks works</h2>
+    <p style="margin: 0 0 32px; font-size: 17px; color: #4A5163; max-width: 680px">Think of a research library with an expert librarian. Journals have bundled these four jobs into one. Stacks separates them so each one can be done, and credited, on its own.</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px">
+      <sc-for list="{{steps}}" as="s" hint-placeholder-count="4">
+        <div style="background: #FFFFFF; border: 1px solid #DDE0E7; border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 10px">
+          <div style="display: flex; align-items: baseline; justify-content: space-between">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #4A5163">{{s.n}}</span>
+            <span style="font-size: 13px; color: #4A5163; font-style: italic">{{s.analogy}}</span>
+          </div>
+          <h3 style="margin: 0; font-family: Newsreader, Georgia, serif; font-size: 26px; font-weight: 500">{{s.title}}</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #3A4050">{{s.body}}</p>
+          <p style="margin: 0; padding-top: 10px; border-top: 1px solid #ECEEF2; font-size: 13px; line-height: 1.5; color: #4A5163">{{s.who}}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="max-width: 1200px; margin: 0 auto; padding: 56px 32px 24px">
+    <div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px; margin-bottom: 24px">
+      <div>
+        <h2 style="margin: 0 0 6px; font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: 36px; letter-spacing: -0.01em">What changed this week</h2>
+        <p style="margin: 0; font-size: 16px; color: #4A5163">Alerts about changes in knowledge, for the 6 questions you follow.</p>
+      </div>
+      <div role="group" aria-label="Filter changes" style="display: flex; flex-wrap: wrap; gap: 8px">
+        <sc-for list="{{filters}}" as="f" hint-placeholder-count="4">
+          <button type="button" onClick="{{f.pick}}" aria-pressed="{{f.pressed}}" style="{{f.style}}">{{f.label}}</button>
+        </sc-for>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 14px">
+      <sc-for list="{{changes}}" as="c" hint-placeholder-count="4">
+        <a href="{{c.href}}" style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; background: #FFFFFF; border: 1px solid #DDE0E7; border-radius: 14px; padding: 22px 24px; text-decoration: none; color: #14171F">
+          <span style="{{c.badgeStyle}}">{{c.kind}}</span>
+          <div style="flex: 999 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 6px">
+            <span style="font-size: 14px; color: #4A5163">{{c.question}}</span>
+            <span style="font-family: Newsreader, Georgia, serif; font-size: 22px; line-height: 1.35">{{c.text}}</span>
+          </div>
+          <div style="flex: 1 1 160px; display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: #4A5163; text-align: right">
+            <span>{{c.records}}</span>
+            <span>{{c.when}}</span>
+          </div>
+        </a>
+      </sc-for>
+      <p style="margin: 4px 0 0; font-size: 14px; color: #4A5163; padding: 14px 24px; border: 1px dashed #C4C9D4; border-radius: 12px">+ 14 new records added to your questions that confirm current answers without changing them. <a href="#">Review them</a></p>
+    </div>
+  </section>
+
+  <section style="max-width: 1200px; margin: 0 auto; padding: 56px 32px 24px">
+    <h2 style="margin: 0 0 24px; font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: 36px; letter-spacing: -0.01em">Living questions</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 20px">
+      <sc-for list="{{questions}}" as="q" hint-placeholder-count="6">
+        <a href="Question.dc.html" style="display: flex; flex-direction: column; gap: 14px; background: #FFFFFF; border: 1px solid #DDE0E7; border-radius: 14px; padding: 24px; text-decoration: none; color: #14171F">
+          <span style="font-size: 13px; color: #4A5163">{{q.area}}</span>
+          <span style="font-family: Newsreader, Georgia, serif; font-size: 22px; line-height: 1.3">{{q.title}}</span>
+          <span style="{{q.badgeStyle}}">{{q.status}}</span>
+          <span style="margin-top: auto; padding-top: 12px; border-top: 1px solid #ECEEF2; font-size: 13px; color: #4A5163">{{q.meta}}</span>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="max-width: 1200px; margin: 0 auto; padding: 56px 32px 80px">
+    <div style="background: #14171F; color: #FFFFFF; border-radius: 18px; padding: 40px; display: flex; flex-wrap: wrap; gap: 40px">
+      <div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 12px">
+        <h2 style="margin: 0; font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: 32px">Available is not the same as evaluated</h2>
+        <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #C9CEDA">Anyone can deposit work right away. Its status shows how far it has been tested, and it rises only as independent review and replication build up.</p>
+      </div>
+      <div style="flex: 2 1 520px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px">
+        <sc-for list="{{statuses}}" as="st" hint-placeholder-count="4">
+          <div style="background: #1F2330; border-radius: 12px; padding: 18px; display: flex; flex-direction: column; gap: 8px">
+            <span style="{{st.badgeStyle}}">{{st.label}}</span>
+            <span style="font-size: 14px; line-height: 1.5; color: #C9CEDA">{{st.body}}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <footer style="border-top: 1px solid #DDE0E7; background: #FFFFFF">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 32px; display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; font-size: 14px; color: #4A5163">
+      <span>Open metadata · Competing syntheses welcome · Every claim traces to its sources</span>
+      <div style="display: flex; flex-wrap: wrap; gap: 20px">
+        <a href="#">Inclusion criteria</a>
+        <a href="#">Challenge a classification</a>
+        <a href="#">Open API &amp; bulk export</a>
+        <a href="#">Become a question editor</a>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#3341A8","options":["#3341A8","#0A5A55","#14171F","#7A3B12"]},"$preview":{"width":1440,"height":2650}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { filter: 'All' }; }
+  badge(kind) {
+    var m = {
+      'Changes recommendation': ['#7A4E00', '#FDF0D5'],
+      'Replication': ['#0A5A55', '#DBF0EC'],
+      'Contradiction': ['#6A2C8E', '#F2E6F9'],
+      'New method': ['#1B4F9C', '#E2ECFA'],
+      'Preliminary': ['#7A4E00', '#FDF0D5'],
+      'Replicated': ['#1B4F9C', '#E2ECFA'],
+      'Contested': ['#6A2C8E', '#F2E6F9'],
+      'Well-supported': ['#0A5A55', '#DBF0EC'],
+      'Well-supported, with conditions': ['#0A5A55', '#DBF0EC']
+    };
+    var c = m[kind] || ['#4A5163', '#ECEEF2'];
+    return 'align-self: flex-start; display: inline-block; font-size: 13px; font-weight: 600; padding: 6px 10px; border-radius: 6px; color: ' + c[0] + '; background: ' + c[1] + '; white-space: nowrap';
+  }
+  renderVals() {
+    var self = this;
+    var accent = this.props.accent ?? '#3341A8';
+    var all = [
+      { kind: 'Changes recommendation', group: 'Changes answer', question: 'When do AI tutors improve students’ independent reasoning?', text: 'Gains now appear to depend on students explaining their thinking before they see AI feedback. Two new studies qualify the current answer.', records: '2 new records · synthesis v3.2', when: 'Updated Oct 30', href: 'Question.dc.html' },
+      { kind: 'Replication', group: 'Raises confidence', question: 'Does spaced retrieval improve L2 vocabulary retention in mobile apps?', text: 'An independent team reproduced the spacing effect with adult learners. Status moved from Replicated to Well-supported.', records: '1 replication · 3 reviews', when: 'Updated Nov 2', href: 'Record.dc.html' },
+      { kind: 'Contradiction', group: 'Needs attention', question: 'Can LLMs reliably score written explanations against a rubric?', text: 'A new dataset suggests rubric-based LLM scoring drifts on responses from non-native English writers. Editors have opened a disagreement.', records: '1 new record · disagreement opened', when: 'Updated Nov 1', href: 'Question.dc.html' },
+      { kind: 'New method', group: 'Raises confidence', question: 'How can learner agency be measured in classrooms?', text: 'A validated observation protocol makes in-class agency measurable without relying on self-report surveys.', records: '1 method package · code + protocol', when: 'Updated Oct 28', href: 'Record.dc.html' }
+    ];
+    var names = ['All', 'Changes answer', 'Raises confidence', 'Needs attention'];
+    var filters = names.map(function (n) {
+      var on = self.state.filter === n;
+      return { label: n, pressed: on ? 'true' : 'false', pick: function () { self.setState({ filter: n }); },
+        style: 'font: inherit; font-size: 14px; padding: 10px 14px; min-height: 44px; border-radius: 999px; cursor: pointer; border: 1px solid ' + (on ? '#14171F' : '#C4C9D4') + '; background: ' + (on ? '#14171F' : '#FFFFFF') + '; color: ' + (on ? '#FFFFFF' : '#14171F') };
+    });
+    var changes = all.filter(function (c) { return self.state.filter === 'All' || c.group === self.state.filter; })
+      .map(function (c) { return Object.assign({}, c, { badgeStyle: self.badge(c.kind) }); });
+    var questions = [
+      { area: 'AI in education · Tutoring', title: 'When do AI tutors improve students’ ability to reason independently?', status: 'Well-supported, with conditions', meta: '38 records · 2 open disagreements · stewarded by the AIED editors' },
+      { area: 'Assessment', title: 'Can LLMs reliably score written explanations against explicit rubric criteria?', status: 'Contested', meta: '21 records · 1 open disagreement · 2 competing syntheses' },
+      { area: 'Language learning', title: 'Does spaced retrieval improve L2 vocabulary retention in mobile apps?', status: 'Well-supported', meta: '64 records · 0 open disagreements' },
+      { area: 'Learner agency', title: 'Does offloading planning to AI reduce learners’ self-regulation over time?', status: 'Preliminary', meta: '7 records · long-term outcomes not yet established' },
+      { area: 'Adaptive systems', title: 'Do open learner models improve students’ calibration of their own knowledge?', status: 'Replicated', meta: '19 records · last changed Sep 14' },
+      { area: 'Simulation training', title: 'When does adaptive scenario difficulty transfer to field performance?', status: 'Preliminary', meta: '11 records · editors seeking reviewers' }
+    ].map(function (q) { return Object.assign({}, q, { badgeStyle: self.badge(q.status) }); });
+    var statuses = [
+      { label: 'Preliminary', body: 'Publicly available. Not yet independently reviewed or tested.' },
+      { label: 'Replicated', body: 'Reproduced by at least one independent team.' },
+      { label: 'Contested', body: 'Credible evidence points both ways. The disagreement is documented.' },
+      { label: 'Well-supported', body: 'Consistent across independent studies, with conditions stated.' }
+    ].map(function (s) { return Object.assign({}, s, { badgeStyle: self.badge(s.label) }); });
+    var steps = [
+      { n: '01', title: 'Publish', analogy: 'Adding to the shelves', body: 'Researchers deposit a versioned research package: manuscript, methods, code, data, limitations, and a statement of who did what.', who: 'Immediate and open. Making it public is not an endorsement.' },
+      { n: '02', title: 'Review', analogy: 'Inspecting the materials', body: 'Peers inspect, replicate, and stress-test packages in the open. Reviews stay attached, so evidence builds up over time instead of hinging on one accept/reject decision.', who: 'Reviews and replications are credited contributions.' },
+      { n: '03', title: 'Curate', analogy: 'The librarian’s guide', body: 'Editors keep living pages for research questions covering what we know, under what conditions, where findings conflict, and what changed.', who: 'Question editors are funded, credited roles.' },
+      { n: '04', title: 'Consult', analogy: 'The reference desk', body: 'Narrow AI models sort, extract, and flag studies. A chat interface helps you explore a question and follow every claim back to its evidence.', who: 'Every automated step can be inspected. People sign off on interpretations.' }
+    ];
+    return { accent: accent, filters: filters, changes: changes, questions: questions, statuses: statuses, steps: steps };
+  }
+}
+</script>
+</body>
+</html>

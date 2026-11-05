@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Stacks — record (card catalog)</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&amp;family=Libre+Caslon+Text:wght@400;700&amp;family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F4F5F7}
+a{color:#1F4E8C}a:hover{color:#123462}
+</style>
+</helmet>
+<div style="font-family: 'Public Sans', system-ui, sans-serif; color: #1A1F2B; background: #F4F5F7; min-height: 100vh">
+
+  <header style="background: #FFFFFF; border-bottom: 1px solid #E3E5EA">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; flex-wrap: wrap; align-items: flex-end; gap: 8px 28px; min-height: 64px">
+      <a href="#" style="font-family: 'Libre Caslon Text', Georgia, serif; font-size: 26px; color: #1A1F2B; text-decoration: none; align-self: center; display: inline-flex; align-items: center; gap: 10px">
+        <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><rect x="2" y="4" width="18" height="14" rx="1.5" fill="none" stroke="#1A1F2B" stroke-width="1.6"></rect><line x1="2" y1="8" x2="20" y2="8" stroke="#C0392B" stroke-width="1.6"></line><circle cx="11" cy="15" r="1.4" fill="#1A1F2B"></circle></svg>
+        Stacks
+      </a>
+      <nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 4px; flex: 1 1 auto; align-self: flex-end">
+        <a href="#" style="font-size: 15px; font-weight: 500; color: #4A5160; text-decoration: none; padding: 12px 14px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">Questions</a>
+        <a href="#" aria-current="page" style="font-size: 15px; font-weight: 600; color: #1A1F2B; text-decoration: none; padding: 12px 14px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center; background: #F4F5F7; border: 1px solid #E3E5EA; border-bottom: 0; border-radius: 6px 6px 0 0; margin-bottom: -1px">Records</a>
+        <a href="#" style="font-size: 15px; font-weight: 500; color: #4A5160; text-decoration: none; padding: 12px 14px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">Research directions</a>
+        <a href="#" style="font-size: 15px; font-weight: 500; color: #4A5160; text-decoration: none; padding: 12px 14px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">My Stacks</a>
+      </nav>
+      <div style="display: flex; align-items: center; gap: 14px; align-self: center">
+        <span style="font-family: 'Courier Prime', monospace; font-size: 12px; color: #5A6170">CONCEPT · SAMPLE CONTENT</span>
+        <button type="button" onClick="{{toggleAsk}}" aria-expanded="{{askExpanded}}" style="font-family: 'Public Sans', sans-serif; font-size: 14px; font-weight: 600; min-height: 44px; padding: 10px 16px; border-radius: 6px; border: 1px solid #1A1F2B; background: #FFFFFF; color: #1A1F2B; cursor: pointer">Ask</button>
+      </div>
+    </div>
+  </header>
+
+  <div style="max-width: 1200px; margin: 0 auto; padding: 24px 24px 80px; display: flex; flex-direction: column; gap: 28px">
+    <nav aria-label="Breadcrumb" style="font-size: 14px; color: #5A6170"><a href="#">Records</a> › Instructional design › <span style="font-family: 'Courier Prime', monospace">STK 2026.0412</span></nav>
+
+    <sc-if value="{{askOpen}}" hint-placeholder-val="{{ false }}">
+      <section aria-label="Reference desk" style="background: #FFFFFF; border: 1px solid #E3E5EA; border-radius: 8px; padding: 18px 20px; display: flex; flex-direction: column; gap: 10px">
+        <label for="ask" style="font-size: 15px; font-weight: 600">Ask about this record</label>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px">
+          <input id="ask" type="text" placeholder="e.g., Did the effect hold for older students?" style="flex: 1 1 280px; min-width: 0; font: inherit; font-size: 16px; padding: 12px 14px; border: 1px solid #C9CDD5; border-radius: 6px; background: #FFFFFF; color: #1A1F2B">
+          <button type="button" style="font-family: 'Public Sans', sans-serif; font-size: 15px; font-weight: 600; min-height: 44px; padding: 10px 18px; border-radius: 6px; border: 0; background: #1A1F2B; color: #FFFFFF; cursor: pointer">Ask</button>
+        </div>
+        <span style="font-size: 13px; color: #5A6170">Answers come from this record and the questions it's linked to, with every claim traced.</span>
+      </section>
+    </sc-if>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start">
+      <main style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 32px">
+
+        <article aria-label="Catalog card" style="position: relative; background: #FFFFFF; border: 1px solid #E3E5EA; border-radius: 6px; box-shadow: 0 1px 2px rgba(20,24,33,0.04); padding: 20px 24px 36px">
+          <div style="border-bottom: 2px solid #C0392B; padding-bottom: 8px; margin-bottom: 16px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; font-family: 'Courier Prime', monospace; font-size: 14px; color: #4A5160">
+            <span style="color: #1A1F2B; font-weight: 700">STK 2026.0412 · v2</span><span>Research package · deposited MAR 18 2026</span>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 16px 24px; align-items: flex-start">
+            <div style="flex: 999 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 8px">
+              <h1 style="margin: 0; font-size: 26px; line-height: 1.25; font-weight: 700; letter-spacing: -0.01em">Explain-first prompting and delayed transfer in an algebra tutor</h1>
+              <span style="font-size: 15px; color: #4A5160">R. Alvarez, K. Osei, M. Lindqvist, and the Westlake Math Collaborative</span>
+              <span style="font-family: 'Courier Prime', monospace; font-size: 13px; color: #5A6170">EXPERIMENTAL · RANDOMIZED · 412 STUDENTS · GRADES 7–9 · CC-BY 4.0</span>
+            </div>
+            <span style="flex: none; margin-left: auto; display: inline-block; transform: rotate(-2deg); border: 2px solid #1F4E8C; box-shadow: inset 0 0 0 2px #FFFFFF, inset 0 0 0 3px #1F4E8C; color: #1F4E8C; font-family: 'Courier Prime', monospace; font-weight: 700; font-size: 15px; letter-spacing: 0.12em; padding: 7px 14px; border-radius: 4px">REPLICATED</span>
+          </div>
+          <p style="margin: 16px 0 0; max-width: 680px; font-size: 16px; line-height: 1.6; color: #2F3542">Students who explained their reasoning before the AI tutor gave feedback did better on a two-week transfer test. Students who got feedback first did not.</p>
+          <ol aria-label="Evidence so far" style="list-style: none; margin: 18px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px">
+            <sc-for list="{{trail}}" as="t" hint-placeholder-count="4">
+              <li style="{{t.style}}">{{t.label}}</li>
+            </sc-for>
+          </ol>
+          <div aria-hidden="true" style="position: absolute; left: 50%; bottom: 12px; width: 10px; height: 10px; margin-left: -5px; border-radius: 999px; background: #F4F5F7; box-shadow: inset 0 1px 2px rgba(0,0,0,0.18)"></div>
+        </article>
+
+        <section style="display: flex; flex-direction: column; gap: 14px">
+          <h2 style="margin: 0; font-size: 20px; font-weight: 700">Findings</h2>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px">
+            <sc-for list="{{findings}}" as="f" hint-placeholder-count="4">
+              <article style="{{f.cardStyle}}">
+                <div style="display: flex; justify-content: space-between; gap: 8px; font-family: 'Courier Prime', monospace; font-size: 12px; letter-spacing: 0.06em; color: #5A6170; border-bottom: 1px solid #ECEEF2; padding-bottom: 6px">
+                  <span>{{f.num}}</span><span>{{f.kind}}</span>
+                </div>
+                <span style="font-size: 15px; line-height: 1.5">{{f.claim}}</span>
+                <a href="#" style="font-size: 13px; line-height: 1.4">{{f.link}}</a>
+                <span style="{{f.noteStyle}}">{{f.note}}</span>
+              </article>
+            </sc-for>
+          </div>
+        </section>
+
+        <section style="display: flex; flex-direction: column; gap: 14px">
+          <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px">
+            <h2 style="margin: 0; font-size: 20px; font-weight: 700">Reviews</h2>
+            <div role="group" aria-label="Show reviews" style="display: flex; gap: 6px">
+              <sc-for list="{{reviewTabs}}" as="t" hint-placeholder-count="3">
+                <button type="button" onClick="{{t.pick}}" aria-pressed="{{t.pressed}}" style="{{t.style}}">{{t.label}}</button>
+              </sc-for>
+            </div>
+          </div>
+          <sc-for list="{{reviews}}" as="r" hint-placeholder-count="3">
+            <article style="{{r.slipStyle}}">
+              <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; font-family: 'Courier Prime', monospace; font-size: 12px; letter-spacing: 0.06em; color: #4A5160">
+                <span style="font-weight: 700; color: #1A1F2B">{{r.label}}</span><span>{{r.meta}}</span>
+              </div>
+              <p style="margin: 0; font-size: 15px; line-height: 1.6">{{r.body}}</p>
+              <sc-if value="{{r.human}}" hint-placeholder-val="{{ false }}">
+                <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 13px; color: #5A6170">
+                  <span>Was this useful?</span>
+                  <button type="button" style="font-family: 'Public Sans', sans-serif; font-size: 14px; min-height: 44px; padding: 8px 14px; border-radius: 6px; border: 1px solid #C9CDD5; background: #FFFFFF; color: #1A1F2B; cursor: pointer">Useful</button>
+                  <button type="button" style="font-family: 'Public Sans', sans-serif; font-size: 14px; min-height: 44px; padding: 8px 14px; border-radius: 6px; border: 1px solid #C9CDD5; background: #FFFFFF; color: #1A1F2B; cursor: pointer">Not useful, because…</button>
+                  <span>{{r.rating}}</span>
+                </div>
+              </sc-if>
+            </article>
+          </sc-for>
+          <a href="#" style="align-self: flex-start; font-size: 15px; font-weight: 600; min-height: 44px; padding: 10px 18px; border-radius: 6px; background: #1A1F2B; color: #FFFFFF; text-decoration: none; display: inline-flex; align-items: center; box-sizing: border-box">Write a review</a>
+        </section>
+
+        <section style="display: flex; flex-direction: column; gap: 0">
+          <h2 style="margin: 0 0 14px; font-size: 20px; font-weight: 700">Package</h2>
+          <span style="align-self: flex-start; background: #FFFFFF; border: 1px solid #E3E5EA; border-bottom: 0; border-radius: 6px 6px 0 0; padding: 6px 14px; font-family: 'Courier Prime', monospace; font-size: 12px; letter-spacing: 0.08em; color: #4A5160; position: relative; z-index: 1; margin-bottom: -1px">FOLDER · 6 ITEMS</span>
+          <div style="background: #FFFFFF; border: 1px solid #E3E5EA; border-radius: 0 6px 6px 6px; overflow: hidden">
+            <sc-for list="{{pkg}}" as="p" hint-placeholder-count="6">
+              <a href="#" style="display: flex; flex-wrap: wrap; gap: 4px 16px; align-items: baseline; padding: 12px 16px; border-bottom: 1px solid #ECEEF2; text-decoration: none; color: #1A1F2B">
+                <span style="flex: 0 0 140px; font-family: 'Courier Prime', monospace; font-size: 12px; letter-spacing: 0.06em; color: #5A6170">{{p.kind}}</span>
+                <span style="flex: 1 1 200px; font-size: 15px; font-weight: 600">{{p.name}}</span>
+                <span style="font-size: 13px; color: #5A6170">{{p.note}}</span>
+              </a>
+            </sc-for>
+          </div>
+        </section>
+      </main>
+
+      <aside style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+        <section aria-label="Evidence history" style="background: #FFFFFF; border: 1px solid #E3E5EA; border-radius: 6px; padding: 14px 16px">
+          <h2 style="margin: 0 0 6px; font-family: 'Courier Prime', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; color: #4A5160">EVIDENCE · DATE STAMPED</h2>
+          <ol style="list-style: none; margin: 0; padding: 0">
+            <sc-for list="{{timeline}}" as="t" hint-placeholder-count="6">
+              <li style="display: flex; gap: 12px; border-top: 1px solid #ECEEF2; padding: 10px 0; align-items: baseline">
+                <span style="{{t.dateStyle}}">{{t.date}}</span>
+                <span style="font-size: 14px; line-height: 1.45">{{t.event}}</span>
+              </li>
+            </sc-for>
+          </ol>
+        </section>
+
+        <section style="display: flex; flex-direction: column; gap: 10px">
+          <h2 style="margin: 0; font-size: 17px; font-weight: 700">Where this is used</h2>
+          <sc-for list="{{uses}}" as="u" hint-placeholder-count="3">
+            <a href="#" style="background: #FFFFFF; border: 1px solid #E3E5EA; border-left: 3px solid #2F6B3A; border-radius: 6px; padding: 12px 14px; text-decoration: none; color: #1A1F2B; display: flex; flex-direction: column; gap: 4px">
+              <span style="font-family: 'Courier Prime', monospace; font-size: 11.5px; letter-spacing: 0.08em; color: #2F6B3A; font-weight: 700">{{u.role}}</span>
+              <span style="font-size: 15px; line-height: 1.4; font-weight: 500">{{u.q}}</span>
+            </a>
+          </sc-for>
+        </section>
+
+        <section style="background: #FFFFFF; border: 1px solid #E3E5EA; border-radius: 6px; padding: 14px 16px">
+          <h2 style="margin: 0 0 10px; font-size: 17px; font-weight: 700">Who did what</h2>
+          <dl style="margin: 0; display: flex; flex-direction: column; gap: 10px; font-size: 14px; line-height: 1.45">
+            <sc-for list="{{credits}}" as="c" hint-placeholder-count="5">
+              <div>
+                <dt style="font-weight: 600">{{c.who}}</dt>
+                <dd style="margin: 2px 0 0; color: #4A5160">{{c.what}}</dd>
+              </div>
+            </sc-for>
+          </dl>
+        </section>
+      </aside>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2500}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { tab: 'All', ask: false }; }
+  renderVals() {
+    var self = this;
+    var card = "background: #FFFFFF; border: 1px solid #E3E5EA; border-radius: 6px; padding: 12px 14px 14px; display: flex; flex-direction: column; gap: 8px";
+    var pencil = "align-self: flex-start; font-family: 'Courier Prime', monospace; font-style: italic; font-size: 12px; color: #5E6470; border: 1px dashed #A3A8B2; border-radius: 4px; padding: 2px 8px";
+    var confirmed = "align-self: flex-start; font-size: 12px; color: #2F6B3A; font-weight: 500";
+    var findings = [
+      { num: 'FINDING 1', kind: 'NULL RESULT', claim: 'Explain-first and feedback-first students scored the same at posttest.', link: 'Qualifies → AI tutors and independent reasoning', note: '✓ Confirmed by author', p: false },
+      { num: 'FINDING 2', kind: 'RESULT', claim: 'Explain-first students scored higher on the two-week transfer test.', link: 'Changes → AI tutors and independent reasoning', note: '✓ Confirmed by auditor', p: false },
+      { num: 'FINDING 3', kind: 'SUBGROUP', claim: 'The delayed advantage held for 7th graders but not 9th graders.', link: 'Qualifies → Feedback timing by grade level', note: 'pencilled by model · 0.78 · report a problem', p: true },
+      { num: 'IMPLICATION', kind: 'UNTESTED', claim: 'Tutors should withhold worked solutions until students explain.', link: 'Tangential → Designing AI tutor feedback', note: 'pencilled by model · 0.64 · report a problem', p: true }
+    ].map(function (f) {
+      return Object.assign({}, f, { cardStyle: card + (f.kind === 'UNTESTED' ? '; border-style: dashed' : ''), noteStyle: f.p ? pencil : confirmed });
+    });
+    var slipBase = "border-radius: 6px; padding: 14px 16px; display: flex; flex-direction: column; gap: 10px";
+    var allReviews = [
+      { label: 'REVIEWER 1 · AI', meta: 'THE CASE FOR', body: 'The explain-first condition is a clean, testable design rule, and the delayed measure targets what matters: independent transfer. The open code and preregistration make the claim easy to check.', kind: 'AI', human: false, rating: '' },
+      { label: 'REVIEWER 2 · AI', meta: 'THE CRITIQUE', body: 'The delayed test differs in format from the practice items, so part of the advantage could be format familiarity. The 9th-grade subgroup is small, and the paper says little about how long students spent explaining.', kind: 'AI', human: false, rating: '' },
+      { label: 'REVIEWER 3', meta: 'VERIFIED · ANONYMOUS', body: 'Agree with Reviewer 2 on the format mismatch. I reran the shared analysis with format-matched items and the delayed effect shrinks but remains. Authors should report this in v3.', kind: 'Human', human: true, rating: '7 rated useful' }
+    ];
+    var tabs = ['All', 'AI', 'Human'].map(function (n) {
+      var on = self.state.tab === n;
+      return { label: n === 'AI' ? 'AI starter' : n, pressed: on ? 'true' : 'false', pick: function () { self.setState({ tab: n }); },
+        style: "font-family: 'Public Sans', sans-serif; font-size: 14px; font-weight: 500; min-height: 44px; padding: 8px 14px; border-radius: 6px; cursor: pointer; border: 1px solid " + (on ? '#1A1F2B' : '#C9CDD5') + "; background: " + (on ? '#1A1F2B' : '#FFFFFF') + "; color: " + (on ? '#FFFFFF' : '#1A1F2B') };
+    });
+    var reviews = allReviews.filter(function (r) { return self.state.tab === 'All' || r.kind === self.state.tab; }).map(function (r) {
+      return Object.assign({}, r, { slipStyle: slipBase + (r.human ? '; background: #FFFFFF; border: 1px solid #E3E5EA' : '; background: #F3F6FB; border: 1px solid #DCE3EE') });
+    });
+    var trailItem = function (c, done) { return "font-family: 'Courier Prime', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.06em; padding: 4px 9px; border-radius: 4px; border: 1px solid " + c + "; color: " + c + (done ? '' : '; border-style: dashed; opacity: 0.7'); };
+    var dateStyle = function (c) { return "flex: none; width: 96px; font-family: 'Courier Prime', monospace; font-weight: 700; font-size: 12.5px; color: " + c + "; letter-spacing: 0.04em"; };
+    return {
+      askOpen: this.state.ask,
+      askExpanded: this.state.ask ? 'true' : 'false',
+      toggleAsk: function () { self.setState({ ask: !self.state.ask }); },
+      trail: [
+        { label: 'SUBMITTED · MAR 18', style: trailItem('#5A6170', true) },
+        { label: 'AI REVIEWED · MAR 18', style: trailItem('#5A6170', true) },
+        { label: 'PEER-REVIEWED · MAY 14', style: trailItem('#5B3A8C', true) },
+        { label: 'REPLICATED · SEP 30', style: trailItem('#1F4E8C', true) }
+      ],
+      findings: findings,
+      reviewTabs: tabs,
+      reviews: reviews,
+      timeline: [
+        { date: 'OCT 30 2026', event: 'Changed a maintained answer (synthesis v3.2)', dateStyle: dateStyle('#2F6B3A') },
+        { date: 'SEP 30 2026', event: 'Replicated by an independent team, 2 schools', dateStyle: dateStyle('#1F4E8C') },
+        { date: 'JUN 20 2026', event: 'Robustness check: effect holds', dateStyle: dateStyle('#1F4E8C') },
+        { date: 'MAY 14 2026', event: 'Peer-reviewed: 3 open reviews', dateStyle: dateStyle('#5B3A8C') },
+        { date: 'MAR 18 2026', event: 'AI starter reviews attached', dateStyle: dateStyle('#5A6170') },
+        { date: 'MAR 18 2026', event: 'Deposited', dateStyle: dateStyle('#5A6170') }
+      ],
+      uses: [
+        { role: 'QUALIFIES THE ANSWER', q: 'When do AI tutors improve students’ ability to reason independently?' },
+        { role: 'SUPPLIES A METHOD', q: 'How should delayed transfer be measured in tutoring studies?' },
+        { role: 'TANGENTIAL · IMPLICATION', q: 'How should AI tutor feedback be designed?' }
+      ],
+      pkg: [
+        { kind: 'MANUSCRIPT', name: 'Full paper, v2', note: 'Revised after review' },
+        { kind: 'PREREGISTRATION', name: 'Analysis plan', note: 'Registered before data collection' },
+        { kind: 'CODE', name: 'Tutor prompts and analysis', note: 'Reproduces every figure' },
+        { kind: 'DATA', name: 'De-identified trial data', note: 'Access-controlled' },
+        { kind: 'INSTRUMENTS', name: 'Transfer test items', note: 'CC-BY' },
+        { kind: 'FAILURE CASES', name: 'Where the tutor broke', note: '37 logged sessions' }
+      ],
+      credits: [
+        { who: 'R. Alvarez', what: 'Conceptualization, design, failure criteria' },
+        { who: 'K. Osei', what: 'Analysis, robustness checks, preregistration' },
+        { who: 'M. Lindqvist', what: 'Tutor and prompt pipeline, code release' },
+        { who: 'Westlake Math Collaborative', what: 'Recruitment, data collection' },
+        { who: 'AI tools', what: 'Coding help, copy-editing (checked by authors)' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

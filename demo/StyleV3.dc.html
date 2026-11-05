@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Stacks — style sheet v3</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&amp;family=Libre+Caslon+Text:wght@400;700&amp;family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F5F2EC}
+a{color:#1F4E8C}a:hover{color:#123462}
+</style>
+</helmet>
+<div style="font-family: 'Public Sans', system-ui, sans-serif; color: #1E1C19; background: #F5F2EC; min-height: 100vh; padding: 48px 24px 80px; box-sizing: border-box">
+  <div style="max-width: 1180px; margin: 0 auto; display: flex; flex-direction: column; gap: 52px">
+
+    <header style="display: flex; flex-direction: column; gap: 10px">
+      <span style="font-family: 'Courier Prime', monospace; font-size: 13px; letter-spacing: 0.12em; color: #5E5950">STACKS · DESIGN LANGUAGE · v0.3</span>
+      <h1 style="margin: 0; font-family: 'Libre Caslon Text', Georgia, serif; font-weight: 400; font-size: clamp(34px, 5vw, 52px); line-height: 1.1">A modern site with catalog-card details, warmed up</h1>
+      <p style="margin: 0; max-width: 760px; font-size: 18px; line-height: 1.6; color: #35322C">The frame stays clean for heavy daily use, now on a warm neutral instead of cool grey. The card catalog shows up in the details that carry meaning: the red rule and faint ruled lines on a record, the call number, a pile of evidence stamps, rotated date stamps, pencil for anything a model proposed, and index tabs.</p>
+    </header>
+
+    <section style="display: flex; flex-direction: column; gap: 18px">
+      <h2 style="margin: 0; font-size: 22px; font-weight: 700">Color</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 14px">
+        <sc-for list="{{swatches}}" as="s" hint-placeholder-count="8">
+          <div style="background: #FFFDF9; border: 1px solid #E5E0D6; border-radius: 6px; overflow: hidden">
+            <div style="{{s.chip}}"></div>
+            <div style="padding: 10px 12px; display: flex; flex-direction: column; gap: 3px">
+              <span style="font-size: 14px; font-weight: 600">{{s.name}}</span>
+              <span style="font-family: 'Courier Prime', monospace; font-size: 12.5px; color: #5E5950">{{s.hex}}</span>
+              <span style="font-size: 13px; line-height: 1.4; color: #35322C">{{s.use}}</span>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+
+    <section style="display: flex; flex-direction: column; gap: 18px">
+      <h2 style="margin: 0; font-size: 22px; font-weight: 700">Type</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px">
+        <div style="background: #FFFDF9; border: 1px solid #E5E0D6; border-radius: 6px; padding: 20px; display: flex; flex-direction: column; gap: 8px">
+          <span style="font-family: 'Courier Prime', monospace; font-size: 12px; color: #5E5950">READING AND UI · PUBLIC SANS</span>
+          <span style="font-size: 24px; font-weight: 700; line-height: 1.25">Explain-first prompting and delayed transfer</span>
+          <span style="font-size: 16px; line-height: 1.6">Titles, claims, answers, reviews, buttons. Almost everything people read.</span>
+        </div>
+        <div style="background: #FFFDF9; border: 1px solid #E5E0D6; border-radius: 6px; padding: 20px; display: flex; flex-direction: column; gap: 8px">
+          <span style="font-family: 'Courier Prime', monospace; font-size: 12px; color: #5E5950">CATALOG DETAILS · COURIER PRIME</span>
+          <span style="font-family: 'Courier Prime', monospace; font-size: 16px; line-height: 1.5">STK 2026.0412 · v2<br>FINDING 2 · RESULT<br>MAR 18 2026</span>
+          <span style="font-size: 14px; color: #35322C">Only short labels: call numbers, IDs, dates, field labels, stamps. Never paragraphs.</span>
+        </div>
+        <div style="background: #FFFDF9; border: 1px solid #E5E0D6; border-radius: 6px; padding: 20px; display: flex; flex-direction: column; gap: 8px">
+          <span style="font-family: 'Courier Prime', monospace; font-size: 12px; color: #5E5950">WORDMARK AND QUESTIONS · LIBRE CASLON TEXT</span>
+          <span style="font-family: 'Libre Caslon Text', Georgia, serif; font-size: 26px; line-height: 1.25">When do AI tutors help students reason on their own?</span>
+          <span style="font-size: 14px; color: #35322C">The wordmark and question titles, so questions read as the catalog's headings.</span>
+        </div>
+      </div>
+    </section>
+
+    <section style="display: flex; flex-direction: column; gap: 18px">
+      <h2 style="margin: 0; font-size: 22px; font-weight: 700">Evidence stamps</h2>
+      <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #35322C; max-width: 760px">Every stamp carries its word, so color is never the only signal. Two ways to show a record's history are below; the record page has a switch to compare them in place.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: center; background: #FFFDF9; border: 1px solid #E5E0D6; border-radius: 6px; padding: 28px 24px">
+        <sc-for list="{{stamps}}" as="st" hint-placeholder-count="6">
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 10px">
+            <span style="{{st.style}}">{{st.word}}</span>
+            <span style="font-size: 12px; color: #5E5950">{{st.note}}</span>
+          </div>
+        </sc-for>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px; align-items: start">
+        <div style="display: flex; flex-direction: column; gap: 10px">
+          <span style="font-family: 'Courier Prime', monospace; font-size: 12px; color: #5E5950">OPTION A · STACKED PILE</span>
+          <div style="background: #FFFDF9; border: 1px solid #E5E0D6; border-radius: 6px; padding: 24px 20px">
+            <ol aria-label="Evidence stamps, oldest to newest" style="list-style: none; margin: 0; padding: 6px 4px; display: flex; flex-wrap: wrap; align-items: center">
+              <sc-for list="{{pile}}" as="p" hint-placeholder-count="4">
+                <li style="{{p.style}}"><span style="display: block">{{p.word}}</span><span style="display: block; font-size: 10px; letter-spacing: 0.08em; font-weight: 400; margin-top: 2px">{{p.date}}</span></li>
+              </sc-for>
+            </ol>
+          </div>
+          <span style="font-size: 13px; line-height: 1.5; color: #35322C">Every level the work has passed, stamped over the last one, newest on top. Older stamps fade slightly so the current one reads first. Sits at the bottom of the record card.</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px">
+          <span style="font-family: 'Courier Prime', monospace; font-size: 12px; color: #5E5950">OPTION B · SINGLE STAMP + TRAIL</span>
+          <div style="background: #FFFDF9; border: 1px solid #E5E0D6; border-radius: 6px; padding: 24px 20px; display: flex; flex-direction: column; gap: 16px; align-items: flex-start">
+            <span style="{{currentStamp}}">REPLICATED</span>
+            <ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px">
+              <sc-for list="{{trail}}" as="t" hint-placeholder-count="4">
+                <li style="{{t.style}}">{{t.label}}</li>
+              </sc-for>
+            </ol>
+          </div>
+          <span style="font-size: 13px; line-height: 1.5; color: #35322C">One stamp for the current standing, beside the title. Earlier levels are a quiet row of dated labels.</span>
+        </div>
+      </div>
+    </section>
+
+    <section style="display: flex; flex-direction: column; gap: 18px">
+      <h2 style="margin: 0; font-size: 22px; font-weight: 700">Components</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px; align-items: start">
+
+        <div style="display: flex; flex-direction: column; gap: 10px">
+          <span style="font-family: 'Courier Prime', monospace; font-size: 12px; color: #5E5950">RECORD CARD</span>
+          <article style="position: relative; background: #FFFDF9; border: 1px solid #E5E0D6; border-radius: 6px; padding: 16px 18px 30px; display: flex; flex-direction: column; gap: 8px">
+            <div style="border-bottom: 2px solid #C0392B; padding-bottom: 6px; display: flex; justify-content: space-between; gap: 10px; font-family: 'Courier Prime', monospace; font-size: 13px; color: #4F4B43">
+              <span style="color: #1E1C19; font-weight: 700">STK 2026.0412 · v2</span><span>MAR 18 2026</span>
+            </div>
+            <div style="display: flex; gap: 12px; align-items: flex-start">
+              <span style="flex: 1 1 auto; font-size: 17px; font-weight: 700; line-height: 1.3">Explain-first prompting and delayed transfer in an algebra tutor</span>
+              </div>
+            <span style="font-size: 14px; color: #4F4B43">R. Alvarez, K. Osei, M. Lindqvist</span>
+            <span style="font-size: 15px; line-height: 28px; color: #35322C; background-image: repeating-linear-gradient(to bottom, transparent 0, transparent 27px, #E9EEF5 27px, #E9EEF5 28px)">Explaining before feedback improved two-week transfer. Feedback first did not.</span>
+            <ol aria-label="Evidence stamps" style="list-style: none; margin: 6px 0 0; padding: 4px 2px; display: flex; flex-wrap: wrap; align-items: center">
+              <sc-for list="{{pileSmall}}" as="p" hint-placeholder-count="4">
+                <li style="{{p.style}}">{{p.word}}</li>
+              </sc-for>
+            </ol>
+            <div aria-hidden="true" style="position: absolute; left: 50%; bottom: 10px; width: 10px; height: 10px; margin-left: -5px; border-radius: 999px; background: #F5F2EC; box-shadow: inset 0 1px 2px rgba(0,0,0,0.18)"></div>
+          </article>
+          <span style="font-size: 13px; line-height: 1.5; color: #35322C">Only records get the red rule, the faint blue ruled lines (like an index card), and the punched hole. Everything else is a plain card.</span>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 10px">
+          <span style="font-family: 'Courier Prime', monospace; font-size: 12px; color: #5E5950">PENCIL NOTE · machine-proposed</span>
+          <div style="background: #FFFDF9; border: 1px solid #E5E0D6; border-radius: 6px; padding: 16px 18px; display: flex; flex-direction: column; gap: 10px">
+            <span style="font-size: 15px; line-height: 1.5">Finding 3 qualifies <a href="#">Feedback timing by grade level</a></span>
+            <span style="align-self: flex-start; font-family: 'Courier Prime', monospace; font-style: italic; font-size: 12px; color: #635E54; border: 1px dashed #ABA597; border-radius: 4px; padding: 2px 8px">pencilled by model · 0.78 · <a href="#" style="color: #635E54">report a problem</a></span>
+          </div>
+          <span style="font-size: 13px; line-height: 1.5; color: #35322C">Anything a model proposed is “in pencil”: grey, dashed, and correctable. Once a person confirms it, the note becomes “✓ Confirmed.”</span>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 10px">
+          <span style="font-family: 'Courier Prime', monospace; font-size: 12px; color: #5E5950">DATE-STAMPED HISTORY</span>
+          <div style="background: #FFFDF9; border: 1px solid #E5E0D6; border-radius: 6px; padding: 12px 16px">
+            <sc-for list="{{slip}}" as="d" hint-placeholder-count="4">
+              <div style="display: flex; gap: 12px; border-top: 1px solid #EEEAE2; padding: 9px 0; align-items: center">
+                <span style="{{d.style}}">{{d.date}}</span>
+                <span style="font-size: 14px">{{d.event}}</span>
+              </div>
+            </sc-for>
+          </div>
+          <span style="font-size: 13px; line-height: 1.5; color: #35322C">Version and evidence histories borrow the date-due slip: a date stamped at a slight angle, then what happened. Tap a row to see the change.</span>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 10px">
+          <span style="font-family: 'Courier Prime', monospace; font-size: 12px; color: #5E5950">SEE-ALSO CARD · lineage and related questions</span>
+          <a href="#" style="background: #FFFDF9; border: 1px solid #E5E0D6; border-left: 3px solid #2F6B3A; border-radius: 6px; padding: 12px 14px; text-decoration: none; color: #1E1C19; display: flex; flex-direction: column; gap: 4px">
+            <span style="font-family: 'Courier Prime', monospace; font-size: 11.5px; letter-spacing: 0.08em; color: #2F6B3A; font-weight: 700">SEE ALSO · BUILDS ON</span>
+            <span style="font-size: 15px; font-weight: 500">Self-explanation (concept) · 14 works</span>
+          </a>
+          <span style="font-size: 13px; line-height: 1.5; color: #35322C">The catalog's cross-reference card, reduced to a label and a colored edge.</span>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 10px">
+          <span style="font-family: 'Courier Prime', monospace; font-size: 12px; color: #5E5950">DEPOSIT SLIP · forms</span>
+          <form style="background: #FFFDF9; border: 1px solid #E5E0D6; border-top: 2px solid #1E1C19; border-radius: 6px; padding: 14px 18px 18px; display: flex; flex-direction: column">
+            <span style="font-family: 'Courier Prime', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; padding-bottom: 4px">DEPOSIT SLIP</span>
+            <label for="ds-title" style="font-family: 'Courier Prime', monospace; font-size: 11.5px; letter-spacing: 0.08em; color: #5E5950; padding-top: 12px">TITLE OF WORK</label>
+            <input id="ds-title" type="text" value="Explain-first prompting and delayed transfer" style="font: inherit; font-size: 16px; color: #1E1C19; border: 0; border-bottom: 1px solid #ABA597; background: transparent; padding: 6px 0 8px">
+            <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
+              <div style="display: flex; flex-direction: column">
+                <label for="ds-type" style="font-family: 'Courier Prime', monospace; font-size: 11.5px; letter-spacing: 0.08em; color: #5E5950; padding-top: 12px">RESEARCH TYPE</label>
+                <input id="ds-type" type="text" value="Experimental" style="font: inherit; font-size: 16px; color: #1E1C19; border: 0; border-bottom: 1px solid #ABA597; background: transparent; padding: 6px 0 8px">
+              </div>
+              <div style="display: flex; flex-direction: column">
+                <label for="ds-lic" style="font-family: 'Courier Prime', monospace; font-size: 11.5px; letter-spacing: 0.08em; color: #5E5950; padding-top: 12px">LICENSE</label>
+                <input id="ds-lic" type="text" value="CC-BY 4.0" style="font: inherit; font-size: 16px; color: #1E1C19; border: 0; border-bottom: 1px solid #ABA597; background: transparent; padding: 6px 0 8px">
+              </div>
+            </div>
+          </form>
+          <span style="font-size: 13px; line-height: 1.5; color: #35322C">Forms keep the slip's structure (small typed labels over ruled answer lines) with normal, readable input text.</span>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 10px">
+          <span style="font-family: 'Courier Prime', monospace; font-size: 12px; color: #5E5950">INDEX-TAB NAVIGATION · and buttons</span>
+          <div style="background: #FFFDF9; border: 1px solid #E5E0D6; border-radius: 6px; padding: 14px 14px 0">
+            <div style="display: flex; flex-wrap: wrap; gap: 4px; border-bottom: 1px solid #E5E0D6">
+              <a href="#" style="font-size: 15px; font-weight: 500; color: #4F4B43; text-decoration: none; padding: 12px 14px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">Questions</a>
+              <a href="#" style="font-size: 15px; font-weight: 600; color: #1E1C19; text-decoration: none; padding: 12px 14px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center; background: #F5F2EC; border: 1px solid #E5E0D6; border-bottom: 0; border-radius: 6px 6px 0 0; margin-bottom: -1px">Records</a>
+              <a href="#" style="font-size: 15px; font-weight: 500; color: #4F4B43; text-decoration: none; padding: 12px 14px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">Research directions</a>
+            </div>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 10px">
+            <button type="button" style="font-family: 'Public Sans', sans-serif; font-size: 15px; font-weight: 600; min-height: 44px; padding: 10px 18px; border-radius: 6px; border: 0; background: #1E1C19; color: #FFFDF9; cursor: pointer">Deposit a package</button>
+            <button type="button" style="font-family: 'Public Sans', sans-serif; font-size: 15px; font-weight: 600; min-height: 44px; padding: 10px 18px; border-radius: 6px; border: 1px solid #1E1C19; background: #FFFDF9; color: #1E1C19; cursor: pointer">Follow question</button>
+          </div>
+          <span style="font-size: 13px; line-height: 1.5; color: #35322C">The current page is a raised index tab. Everything else is plain text. Buttons stay large for touch.</span>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2700}}'>
+class Component extends DCLogic {
+  stamp(color) {
+    return "display: inline-block; transform: rotate(-2deg); border: 2px solid " + color + "; box-shadow: inset 0 0 0 2px #FFFDF9, inset 0 0 0 3px " + color + "; color: " + color + "; font-family: 'Courier Prime', monospace; font-weight: 700; font-size: 14px; letter-spacing: 0.12em; padding: 6px 12px; border-radius: 4px";
+  }
+  renderVals() {
+    var self = this;
+    var chip = function (bg, extra) { return 'height: 64px; background: ' + bg + (extra ? '; ' + extra : ''); };
+    var stamps = [
+      { word: 'SUBMITTED', c: '#5E5950', note: 'Open, not yet tested' },
+      { word: 'AI REVIEWED', c: '#5E5950', note: 'Starter reviews attached' },
+      { word: 'ENDORSED', c: '#7A4E00', note: 'Verified researchers vouch' },
+      { word: 'PEER-REVIEWED', c: '#5B3A8C', note: 'Venue or open review' },
+      { word: 'REPLICATED', c: '#1F4E8C', note: 'Reproduced independently' },
+      { word: 'CONTESTED', c: '#A8261F', note: 'Credible evidence both ways' }
+    ].map(function (s) { return { word: s.word, note: s.note, style: self.stamp(s.c) }; });
+    var tilts = [-2.5, 1.5, -1, 2];
+    var dateStyle = function (c, i) { return "flex: none; width: 96px; box-sizing: border-box; text-align: center; display: inline-block; transform: rotate(" + tilts[i % 4] + "deg); border: 1px solid " + c + "; border-radius: 3px; padding: 2px 4px; font-family: 'Courier Prime', monospace; font-weight: 700; font-size: 12px; color: " + c + "; letter-spacing: 0.04em; opacity: 0.92"; };
+    var rot = [-5, 3, -2, 4], dy = [4, -3, 5, -2];
+    var pileItem = function (c, i, n, fs) {
+      return "position: relative; z-index: " + (i + 1) + "; margin-right: " + (i === n - 1 ? 0 : -14) + "px; transform: translateY(" + dy[i % 4] + "px) rotate(" + rot[i % 4] + "deg); border: 2px solid " + c + "; box-shadow: inset 0 0 0 2px rgba(255,253,249,0.9), inset 0 0 0 3px " + c + "; background: rgba(255,253,249,0.82); color: " + c + "; font-family: 'Courier Prime', monospace; font-weight: 700; font-size: " + fs + "px; letter-spacing: 0.1em; padding: 6px 12px 5px; border-radius: 4px; text-align: center; opacity: " + (0.72 + 0.28 * (i / (n - 1)));
+    };
+    var pileData = [['SUBMITTED', 'MAR 18 2026', '#5E5950'], ['AI REVIEWED', 'MAR 18 2026', '#5E5950'], ['PEER-REVIEWED', 'MAY 14 2026', '#5B3A8C'], ['REPLICATED', 'SEP 30 2026', '#1F4E8C']];
+    var trailItem = function (c) { return "font-family: 'Courier Prime', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.06em; padding: 4px 9px; border-radius: 4px; border: 1px solid " + c + "; color: " + c; };
+    return {
+      swatches: [
+        { name: 'Page (warm neutral)', hex: '#F5F2EC', use: 'Background', chip: chip('#F5F2EC', 'border-bottom: 1px solid #E5E0D6') },
+        { name: 'Card', hex: '#FFFDF9', use: 'Cards, panels, header', chip: chip('#FFFDF9', 'border-bottom: 1px solid #E5E0D6') },
+        { name: 'Ink', hex: '#1E1C19', use: 'Text, primary buttons', chip: chip('#1E1C19') },
+        { name: 'Secondary text', hex: '#4F4B43', use: 'Metadata, labels', chip: chip('#4F4B43') },
+        { name: 'Rule', hex: '#E5E0D6', use: 'Borders and dividers', chip: chip('#E5E0D6') },
+        { name: 'Catalog red', hex: '#C0392B', use: 'The record rule only', chip: chip('#C0392B') },
+        { name: 'Ruled line', hex: '#E9EEF5', use: 'Faint lines on records', chip: chip('#FFFDF9', 'background-image: repeating-linear-gradient(to bottom, transparent 0, transparent 15px, #E9EEF5 15px, #E9EEF5 16px); border-bottom: 1px solid #E5E0D6') },
+        { name: 'Link blue', hex: '#1F4E8C', use: 'Links, Replicated', chip: chip('#1F4E8C') },
+        { name: 'AI tint', hex: '#F3F6FB', use: 'AI starter reviews', chip: chip('#F3F6FB', 'border-bottom: 1px solid #DCE3EE') }
+      ],
+      stamps: stamps,
+      pile: pileData.map(function (d, i) { return { word: d[0], date: d[1], style: pileItem(d[2], i, pileData.length, 13) }; }),
+      pileSmall: pileData.map(function (d, i) { return { word: d[0], style: pileItem(d[2], i, pileData.length, 11) }; }),
+      currentStamp: self.stamp('#1F4E8C'),
+      trail: pileData.map(function (d) { return { label: d[0] + ' · ' + d[1].slice(0, 6), style: trailItem(d[2]) }; }),
+      slip: [
+        { date: 'OCT 30 2026', event: 'Answer changed (v3.2)', style: dateStyle('#2F6B3A', 0) },
+        { date: 'SEP 30 2026', event: 'Replicated', style: dateStyle('#1F4E8C', 1) },
+        { date: 'MAY 14 2026', event: 'Peer-reviewed', style: dateStyle('#5B3A8C', 2) },
+        { date: 'MAR 18 2026', event: 'Deposited', style: dateStyle('#5E5950', 3) }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

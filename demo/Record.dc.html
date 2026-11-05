@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Stacks — research package record</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F6F7F9}
+a{color:#3341A8}a:hover{color:#1F2A7A}
+</style>
+</helmet>
+<div style="font-family: Inter, system-ui, sans-serif; color: #14171F; background: #F6F7F9; min-height: 100vh">
+
+  <header style="background: #FFFFFF; border-bottom: 1px solid #DDE0E7">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 16px 32px; display: flex; flex-wrap: wrap; align-items: center; gap: 24px">
+      <a href="Main.dc.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #14171F">
+        <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect x="3" y="4" width="22" height="4" rx="1" fill="#3341A8"></rect><rect x="3" y="12" width="22" height="4" rx="1" fill="#14171F"></rect><rect x="3" y="20" width="22" height="4" rx="1" fill="#14171F"></rect></svg>
+        <span style="font-family: Newsreader, Georgia, serif; font-size: 26px; font-weight: 600; letter-spacing: -0.01em">Stacks</span>
+      </a>
+      <nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 20px; font-size: 15px; flex: 1 1 auto">
+        <a href="Question.dc.html" style="color: #14171F; text-decoration: none">Questions</a>
+        <a href="Record.dc.html" style="color: #3341A8; text-decoration: none; font-weight: 600">Records</a>
+        <a href="#" style="color: #14171F; text-decoration: none">Open reviews</a>
+        <a href="#" style="color: #14171F; text-decoration: none">Reference desk</a>
+        <a href="#" style="color: #14171F; text-decoration: none">For editors</a>
+      </nav>
+      <span style="font-size: 12px; font-weight: 500; color: #4A5163; border: 1px dashed #A9AFBD; border-radius: 999px; padding: 4px 10px">Concept · sample content</span>
+      <a href="Profile.dc.html" style="font-size: 15px; color: #14171F; text-decoration: none">My contributions</a>
+    </div>
+  </header>
+
+  <div style="max-width: 1200px; margin: 0 auto; padding: 40px 32px 80px; display: flex; flex-direction: column; gap: 32px">
+
+    <section style="display: flex; flex-direction: column; gap: 14px">
+      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; font-size: 14px; color: #4A5163">
+        <span style="font-family: 'JetBrains Mono', monospace; color: #14171F">STK-2026-0412 · v2</span>
+        <span>Research package</span>
+        <span>Deposited Mar 18, 2026 · revised Aug 2</span>
+        <span style="font-size: 13px; font-weight: 600; padding: 6px 10px; border-radius: 6px; color: #1B4F9C; background: #E2ECFA">Replicated</span>
+      </div>
+      <h1 style="margin: 0; font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: clamp(32px, 4vw, 46px); line-height: 1.15; letter-spacing: -0.01em; max-width: 960px">Explain-first prompting and delayed transfer in an algebra tutor</h1>
+      <p style="margin: 0; font-size: 17px; line-height: 1.55; color: #3A4050; max-width: 820px">A randomized study across four middle schools. Students who explained their reasoning before the AI tutor gave feedback did better on a two-week transfer test. Students who got feedback first did not.</p>
+      <p style="margin: 0; font-size: 15px; color: #4A5163">R. Alvarez, K. Osei, M. Lindqvist, and the Westlake Math Collaborative</p>
+    </section>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-start">
+      <main style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 28px">
+
+        <section>
+          <h2 style="margin: 0 0 14px; font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: 28px">What’s in the package</h2>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px">
+            <sc-for list="{{pkg}}" as="p" hint-placeholder-count="6">
+              <a href="#" style="display: flex; flex-direction: column; gap: 6px; background: #FFFFFF; border: 1px solid #DDE0E7; border-radius: 12px; padding: 18px; text-decoration: none; color: #14171F">
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #4A5163">{{p.kind}}</span>
+                <span style="font-size: 16px; font-weight: 500">{{p.name}}</span>
+                <span style="font-size: 13px; line-height: 1.5; color: #4A5163">{{p.note}}</span>
+              </a>
+            </sc-for>
+          </div>
+        </section>
+
+        <section style="background: #FFFFFF; border: 1px solid #DDE0E7; border-radius: 16px; padding: 26px">
+          <h2 style="margin: 0 0 4px; font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: 28px">Who did what</h2>
+          <p style="margin: 0 0 18px; font-size: 14px; color: #4A5163">A structured contribution statement, so evaluators don’t have to guess from author order. AI assistance is disclosed like any other contribution.</p>
+          <div style="overflow-x: auto">
+            <table style="width: 100%; border-collapse: collapse; font-size: 15px; min-width: 520px">
+              <thead>
+                <tr style="text-align: left; color: #4A5163; font-size: 13px">
+                  <th scope="col" style="padding: 10px 12px 10px 0; border-bottom: 1px solid #DDE0E7; font-weight: 600">Contributor</th>
+                  <th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #DDE0E7; font-weight: 600">Responsible for</th>
+                </tr>
+              </thead>
+              <tbody>
+                <sc-for list="{{credits}}" as="c" hint-placeholder-count="5">
+                  <tr>
+                    <td style="padding: 14px 12px 14px 0; border-bottom: 1px solid #ECEEF2; font-weight: 500; vertical-align: top; white-space: nowrap">{{c.who}}</td>
+                    <td style="padding: 14px 12px; border-bottom: 1px solid #ECEEF2; line-height: 1.5; color: #3A4050">{{c.what}}</td>
+                  </tr>
+                </sc-for>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <h2 style="margin: 0 0 4px; font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: 28px">How the evidence built up</h2>
+          <p style="margin: 0 0 16px; font-size: 14px; color: #4A5163">No single accept or reject decision. Status rises as independent checks accumulate.</p>
+          <ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0">
+            <sc-for list="{{timeline}}" as="t" hint-placeholder-count="6">
+              <li style="display: flex; gap: 18px">
+                <div style="display: flex; flex-direction: column; align-items: center; flex: none; width: 16px">
+                  <span style="{{t.dot}}"></span>
+                  <span style="flex: 1 1 auto; width: 2px; background: #DDE0E7"></span>
+                </div>
+                <div style="padding-bottom: 22px; display: flex; flex-direction: column; gap: 4px; min-width: 0">
+                  <span style="font-size: 13px; color: #4A5163">{{t.date}} · {{t.who}}</span>
+                  <span style="font-size: 16px; font-weight: 500">{{t.title}}</span>
+                  <span style="font-size: 14px; line-height: 1.5; color: #3A4050">{{t.body}}</span>
+                </div>
+              </li>
+            </sc-for>
+          </ol>
+        </section>
+      </main>
+
+      <aside style="flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+        <section style="background: #FFFFFF; border: 1px solid #DDE0E7; border-radius: 16px; padding: 22px">
+          <h2 style="margin: 0 0 4px; font-size: 16px; font-weight: 600">Where this knowledge is used</h2>
+          <p style="margin: 0 0 16px; font-size: 13px; line-height: 1.5; color: #4A5163">The maintained conclusions this record supports or changes. This is how its influence is recorded, not by download counts.</p>
+          <div style="display: flex; flex-direction: column; gap: 12px">
+            <sc-for list="{{uses}}" as="u" hint-placeholder-count="3">
+              <a href="Question.dc.html" style="display: flex; flex-direction: column; gap: 6px; padding: 14px; border-radius: 10px; background: #F6F7F9; text-decoration: none; color: #14171F">
+                <span style="{{u.style}}">{{u.role}}</span>
+                <span style="font-size: 14px; line-height: 1.45; font-weight: 500">{{u.q}}</span>
+              </a>
+            </sc-for>
+          </div>
+          <div style="margin-top: 16px; padding-top: 14px; border-top: 1px solid #ECEEF2; font-size: 13px; line-height: 1.5; color: #3A4050">
+            <strong>Reference desk:</strong> cited in answers about tutoring and feedback timing. Retrievals are logged with dates and are never turned into a ranking score.
+          </div>
+        </section>
+
+        <section style="background: #FFFFFF; border: 1px solid #DDE0E7; border-radius: 16px; padding: 22px; display: flex; flex-direction: column; gap: 10px">
+          <h2 style="margin: 0; font-size: 16px; font-weight: 600">Review this package</h2>
+          <p style="margin: 0; font-size: 14px; line-height: 1.5; color: #3A4050">Reviews, replications, and robustness checks are credited contributions. They appear on your profile.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px">
+            <a href="#" style="font-size: 14px; font-weight: 500; padding: 12px 14px; border-radius: 8px; background: #3341A8; color: #FFFFFF; text-decoration: none">Write a review</a>
+            <a href="#" style="font-size: 14px; font-weight: 500; padding: 12px 14px; border-radius: 8px; border: 1px solid #14171F; color: #14171F; text-decoration: none">Register a replication</a>
+          </div>
+        </section>
+
+        <section style="background: #FFFFFF; border: 1px solid #DDE0E7; border-radius: 16px; padding: 22px">
+          <h2 style="margin: 0 0 10px; font-size: 16px; font-weight: 600">Stated limitations</h2>
+          <ul style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 14px; line-height: 1.5; color: #3A4050">
+            <li>Four schools in one district. Rural settings weren’t sampled.</li>
+            <li>One delayed measure, at two weeks. Retention beyond that is unknown.</li>
+            <li>The tutor was built on one model family. Behavior may differ on others.</li>
+          </ul>
+        </section>
+      </aside>
+    </div>
+
+    <section style="background: #14171F; color: #FFFFFF; border-radius: 18px; padding: 36px">
+      <h2 style="margin: 0 0 6px; font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: 30px">The evidence trail</h2>
+      <p style="margin: 0 0 24px; font-size: 15px; color: #C9CEDA; max-width: 720px">Anyone who gets an answer can follow it back as far as they need. Credit stays with the people who produced the knowledge, even when nobody opens the PDF.</p>
+      <div style="display: flex; flex-wrap: wrap; align-items: stretch; gap: 12px">
+        <sc-for list="{{trail}}" as="t" hint-placeholder-count="4">
+          <div style="flex: 1 1 200px; display: flex; align-items: center; gap: 12px">
+            <div style="{{t.box}}">
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #C9CEDA">{{t.step}}</span>
+              <span style="font-size: 16px; font-weight: 600">{{t.title}}</span>
+              <span style="font-size: 13px; line-height: 1.5; color: #C9CEDA">{{t.q}}</span>
+            </div>
+            <sc-if value="{{t.arrow}}" hint-placeholder-val="{{ true }}">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9CEDA" stroke-width="2" aria-hidden="true" style="flex: none"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2350}}'>
+class Component extends DCLogic {
+  renderVals() {
+    var dot = function (c) { return 'width: 14px; height: 14px; border-radius: 999px; flex: none; margin-top: 3px; background: ' + c; };
+    var roleStyle = function (fg, bg) { return 'align-self: flex-start; font-size: 12px; font-weight: 600; padding: 4px 8px; border-radius: 6px; color: ' + fg + '; background: ' + bg; };
+    var trailBase = 'flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 6px; padding: 18px; border-radius: 12px; ';
+    var trail = [
+      { step: '01', title: 'Answer', q: 'Why did the reference desk say this?' },
+      { step: '02', title: 'Synthesis claim', q: 'What does the maintained answer actually conclude?' },
+      { step: '03', title: 'Supporting & conflicting studies', q: 'Which records changed that conclusion?' },
+      { step: '04', title: 'Data, methods & people', q: 'Who contributed what, and has anything been corrected?' }
+    ].map(function (t, i, a) {
+      return Object.assign({}, t, { arrow: i < a.length - 1, box: trailBase + (i === 3 ? 'background: #3341A8' : 'background: #1F2330') });
+    });
+    return {
+      trail: trail,
+      pkg: [
+        { kind: 'MANUSCRIPT', name: 'Full paper (v2)', note: 'Revised after public review. Diff from v1 available.' },
+        { kind: 'PREREGISTRATION', name: 'Analysis plan', note: 'Registered before data collection. Deviations listed.' },
+        { kind: 'CODE', name: 'Tutor prompts + analysis scripts', note: 'Versioned release. Reproduces every figure.' },
+        { kind: 'DATA', name: 'De-identified trial data', note: 'Access-controlled under the district data agreement.' },
+        { kind: 'INSTRUMENTS', name: 'Transfer test items', note: 'Reusable under CC-BY.' },
+        { kind: 'FAILURE CASES', name: 'Where the tutor broke', note: '37 logged sessions where prompts misfired.' }
+      ],
+      credits: [
+        { who: 'R. Alvarez', what: 'Framed the question, designed the study and the explain-first condition, and defined the failure criteria' },
+        { who: 'K. Osei', what: 'Led the analysis and robustness checks. Wrote the preregistration.' },
+        { who: 'M. Lindqvist', what: 'Built the tutor and prompt pipeline. Maintains the code release.' },
+        { who: 'Westlake Math Collaborative', what: 'Recruited classrooms, collected data, and checked the transfer test with teachers' },
+        { who: 'AI tools', what: 'Coding assistance and copy-editing. All outputs were checked by the authors.' }
+      ],
+      timeline: [
+        { date: 'Mar 18', who: 'Authors', title: 'Deposited', body: 'Package published openly with status Preliminary.', dot: dot('#7A4E00') },
+        { date: 'Apr 2', who: 'Routing model + editor', title: 'Classified', body: 'Routed to 2 living questions. An editor confirmed the population and outcome fields.', dot: dot('#4A5163') },
+        { date: 'Apr–May', who: '3 open reviewers', title: 'Public reviews', body: 'Reviewers raised concerns that the delayed test format didn’t match the practice tasks. The authors responded in v2.', dot: dot('#4A5163') },
+        { date: 'Jun 20', who: 'Independent team', title: 'Robustness check', body: 'A reanalysis of the shared data confirmed the effect under alternative model specifications.', dot: dot('#4A5163') },
+        { date: 'Sep 30', who: 'Independent team, 2 schools', title: 'Replication', body: 'A direct replication in a different district reproduced the delayed-transfer advantage.', dot: dot('#1B4F9C') },
+        { date: 'Oct 30', who: 'Question editors', title: 'Changed a maintained answer', body: 'Incorporated into synthesis v3.2 as a qualifying condition.', dot: dot('#0A5A55') }
+      ],
+      uses: [
+        { role: 'Qualifies the answer', q: 'When do AI tutors improve students’ ability to reason independently?', style: roleStyle('#7A4E00', '#FDF0D5') },
+        { role: 'Supplies a method', q: 'How should delayed transfer be measured in AI tutoring studies?', style: roleStyle('#1B4F9C', '#E2ECFA') },
+        { role: 'Supports', q: 'Does self-explanation prompting improve learning in math?', style: roleStyle('#0A5A55', '#DBF0EC') }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

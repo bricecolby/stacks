@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Stacks — living question</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F6F7F9}
+a{color:#3341A8}a:hover{color:#1F2A7A}
+</style>
+</helmet>
+<div style="font-family: Inter, system-ui, sans-serif; color: #14171F; background: #F6F7F9; min-height: 100vh">
+
+  <header style="background: #FFFFFF; border-bottom: 1px solid #DDE0E7">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 16px 32px; display: flex; flex-wrap: wrap; align-items: center; gap: 24px">
+      <a href="Main.dc.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #14171F">
+        <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect x="3" y="4" width="22" height="4" rx="1" fill="#3341A8"></rect><rect x="3" y="12" width="22" height="4" rx="1" fill="#14171F"></rect><rect x="3" y="20" width="22" height="4" rx="1" fill="#14171F"></rect></svg>
+        <span style="font-family: Newsreader, Georgia, serif; font-size: 26px; font-weight: 600; letter-spacing: -0.01em">Stacks</span>
+      </a>
+      <nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 20px; font-size: 15px; flex: 1 1 auto">
+        <a href="Question.dc.html" style="color: #3341A8; text-decoration: none; font-weight: 600">Questions</a>
+        <a href="Record.dc.html" style="color: #14171F; text-decoration: none">Records</a>
+        <a href="#" style="color: #14171F; text-decoration: none">Open reviews</a>
+        <a href="#" style="color: #14171F; text-decoration: none">Reference desk</a>
+        <a href="#" style="color: #14171F; text-decoration: none">For editors</a>
+      </nav>
+      <span style="font-size: 12px; font-weight: 500; color: #4A5163; border: 1px dashed #A9AFBD; border-radius: 999px; padding: 4px 10px">Concept · sample content</span>
+      <a href="Profile.dc.html" style="font-size: 15px; color: #14171F; text-decoration: none">My contributions</a>
+    </div>
+  </header>
+
+  <div style="max-width: 1200px; margin: 0 auto; padding: 40px 32px 80px">
+    <nav aria-label="Breadcrumb" style="font-size: 14px; color: #4A5163; margin-bottom: 18px"><a href="Main.dc.html">Questions</a> › AI in education › Tutoring</nav>
+    <h1 style="margin: 0 0 18px; font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: clamp(34px, 4.5vw, 52px); line-height: 1.12; letter-spacing: -0.015em; max-width: 960px">When do AI tutors improve students’ ability to reason independently?</h1>
+    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; font-size: 14px; color: #4A5163; margin-bottom: 32px">
+      <span>Stewarded by the AIED question editors</span>
+      <span style="font-family: 'JetBrains Mono', monospace">Synthesis v3.2</span>
+      <span>Updated Oct 30, 2026</span>
+      <span>38 records</span>
+      <a href="#">Compare 1 competing synthesis</a>
+      <button type="button" onClick="{{toggleFollow}}" aria-pressed="{{followPressed}}" style="{{followStyle}}">{{followLabel}}</button>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-start">
+
+      <main style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 28px">
+
+        <section style="background: #FFFFFF; border: 1px solid #DDE0E7; border-radius: 16px; padding: 28px">
+          <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 14px">
+            <h2 style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #4A5163">Current best-supported answer</h2>
+            <span style="font-size: 13px; font-weight: 600; padding: 6px 10px; border-radius: 6px; color: #0A5A55; background: #DBF0EC">Well-supported, with conditions</span>
+          </div>
+          <p style="margin: 0 0 16px; font-family: Newsreader, Georgia, serif; font-size: 24px; line-height: 1.45">AI tutors improve independent reasoning when they <strong style="font-weight: 600">hold back answers and prompt students to explain their thinking first</strong>. When tutors give solutions on demand, short-term performance improves but delayed transfer does not, and in some studies it declines.</p>
+          <div style="background: #FDF0D5; border-radius: 10px; padding: 14px 16px; display: flex; gap: 12px; align-items: flex-start">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7A4E00" stroke-width="2" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M12 8v5"></path><circle cx="12" cy="16.5" r="0.5"></circle><circle cx="12" cy="12" r="9"></circle></svg>
+            <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A3200"><strong>What changed in v3.2:</strong> two new studies with delayed-transfer outcomes showed that benefits depend on students generating an explanation before they get feedback. Earlier versions said only that “guided hints” help. <a href="#history" style="color: #4A3200">See the diff</a></p>
+          </div>
+        </section>
+
+        <section>
+          <h2 style="margin: 0 0 14px; font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: 28px">Where this answer applies</h2>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px">
+            <sc-for list="{{scope}}" as="s" hint-placeholder-count="4">
+              <div style="background: #FFFFFF; border: 1px solid #DDE0E7; border-radius: 12px; padding: 18px">
+                <h3 style="margin: 0 0 8px; font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #4A5163">{{s.label}}</h3>
+                <p style="margin: 0; font-size: 15px; line-height: 1.5">{{s.body}}</p>
+              </div>
+            </sc-for>
+          </div>
+        </section>
+
+        <section>
+          <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 14px">
+            <h2 style="margin: 0; font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: 28px">The evidence</h2>
+            <div role="group" aria-label="Filter evidence by relationship" style="display: flex; flex-wrap: wrap; gap: 8px">
+              <sc-for list="{{filters}}" as="f" hint-placeholder-count="5">
+                <button type="button" onClick="{{f.pick}}" aria-pressed="{{f.pressed}}" style="{{f.style}}">{{f.label}}</button>
+              </sc-for>
+            </div>
+          </div>
+          <div style="background: #FFFFFF; border: 1px solid #DDE0E7; border-radius: 16px; overflow: hidden">
+            <sc-for list="{{studies}}" as="st" hint-placeholder-count="5">
+              <a href="Record.dc.html" style="display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: flex-start; padding: 20px 24px; border-bottom: 1px solid #ECEEF2; text-decoration: none; color: #14171F">
+                <span style="{{st.relStyle}}">{{st.rel}}</span>
+                <div style="flex: 999 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 6px">
+                  <span style="font-size: 17px; font-weight: 500; line-height: 1.4">{{st.title}}</span>
+                  <span style="font-size: 14px; line-height: 1.5; color: #3A4050">{{st.why}}</span>
+                  <span style="font-size: 13px; color: #4A5163">{{st.meta}}</span>
+                </div>
+                <span style="{{st.statusStyle}}">{{st.status}}</span>
+              </a>
+            </sc-for>
+          </div>
+        </section>
+
+        <section>
+          <h2 style="margin: 0 0 14px; font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: 28px">Open disagreements</h2>
+          <div style="display: flex; flex-direction: column; gap: 14px">
+            <sc-for list="{{disagreements}}" as="d" hint-placeholder-count="2">
+              <div style="background: #FFFFFF; border: 1px solid #DDE0E7; border-radius: 14px; padding: 22px 24px; display: flex; flex-direction: column; gap: 10px">
+                <span style="font-size: 18px; font-weight: 500; line-height: 1.4">{{d.title}}</span>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; font-size: 14px; line-height: 1.5">
+                  <div style="background: #F6F7F9; border-radius: 10px; padding: 12px 14px"><strong>Position A.</strong> {{d.a}}</div>
+                  <div style="background: #F6F7F9; border-radius: 10px; padding: 12px 14px"><strong>Position B.</strong> {{d.b}}</div>
+                </div>
+                <span style="font-size: 14px; color: #3A4050"><strong>What would settle it:</strong> {{d.settle}}</span>
+              </div>
+            </sc-for>
+          </div>
+        </section>
+
+        <section id="history">
+          <h2 style="margin: 0 0 14px; font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: 28px">Version history</h2>
+          <ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0; background: #FFFFFF; border: 1px solid #DDE0E7; border-radius: 16px; overflow: hidden">
+            <sc-for list="{{history}}" as="h" hint-placeholder-count="4">
+              <li style="display: flex; flex-wrap: wrap; gap: 8px 20px; padding: 16px 24px; border-bottom: 1px solid #ECEEF2">
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 14px; flex: 0 0 64px">{{h.v}}</span>
+                <span style="font-size: 14px; color: #4A5163; flex: 0 0 110px">{{h.date}}</span>
+                <span style="font-size: 15px; line-height: 1.5; flex: 999 1 320px; min-width: 0">{{h.note}}</span>
+              </li>
+            </sc-for>
+          </ol>
+        </section>
+      </main>
+
+      <aside style="flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+
+        <section aria-label="Reference desk" style="background: #14171F; color: #FFFFFF; border-radius: 16px; padding: 22px; display: flex; flex-direction: column; gap: 14px">
+          <div style="display: flex; align-items: center; justify-content: space-between">
+            <h2 style="margin: 0; font-size: 16px; font-weight: 600">Reference desk</h2>
+            <span style="font-size: 12px; color: #C9CEDA">Answers from synthesis v3.2</span>
+          </div>
+          <div style="align-self: flex-end; max-width: 90%; background: #3341A8; border-radius: 12px 12px 4px 12px; padding: 12px 14px; font-size: 14px; line-height: 1.5">I teach 9th-grade algebra. Should I let students ask the tutor for worked solutions?</div>
+          <div style="max-width: 95%; background: #1F2330; border-radius: 12px 12px 12px 4px; padding: 14px; font-size: 14px; line-height: 1.55; color: #E6E9F0; display: flex; flex-direction: column; gap: 10px">
+            <span>Probably not by default. The evidence suggests having students write their own explanation first, then giving hints. Solutions on demand raised quiz scores but not performance two weeks later.</span>
+            <span style="font-size: 13px; color: #C9CEDA">This holds best for middle and high school math. Evidence for 9th grade specifically is limited.</span>
+            <div style="display: flex; flex-wrap: wrap; gap: 6px">
+              <a href="#" style="font-size: 12px; color: #FFFFFF; background: #2C3142; border-radius: 6px; padding: 6px 8px; text-decoration: none">Claim 1 → 6 studies</a>
+              <a href="#" style="font-size: 12px; color: #FFFFFF; background: #2C3142; border-radius: 6px; padding: 6px 8px; text-decoration: none">Scope note → 2 studies</a>
+              <a href="Record.dc.html" style="font-size: 12px; color: #FFFFFF; background: #2C3142; border-radius: 6px; padding: 6px 8px; text-decoration: none">Key record STK-0412</a>
+            </div>
+          </div>
+          <label for="ask" style="font-size: 13px; color: #C9CEDA">Ask about this question</label>
+          <div style="display: flex; gap: 8px">
+            <input id="ask" type="text" placeholder="e.g. Does this hold for adult learners?" style="flex: 1 1 auto; min-width: 0; font: inherit; font-size: 14px; padding: 12px; border-radius: 8px; border: 1px solid #3A4050; background: #0E1016; color: #FFFFFF">
+            <button type="button" style="font: inherit; font-size: 14px; font-weight: 500; padding: 12px 14px; min-height: 44px; border-radius: 8px; border: 0; background: #FFFFFF; color: #14171F; cursor: pointer">Ask</button>
+          </div>
+        </section>
+
+        <section style="background: #FFFFFF; border: 1px solid #DDE0E7; border-radius: 16px; padding: 22px">
+          <h2 style="margin: 0 0 4px; font-size: 16px; font-weight: 600">How this answer was built</h2>
+          <p style="margin: 0 0 16px; font-size: 13px; color: #4A5163">Narrow models do bounded tasks. People own the interpretation.</p>
+          <ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px">
+            <sc-for list="{{pipeline}}" as="p" hint-placeholder-count="5">
+              <li style="display: flex; flex-direction: column; gap: 4px; padding-bottom: 14px; border-bottom: 1px solid #ECEEF2">
+                <span style="font-size: 14px; font-weight: 600">{{p.task}}</span>
+                <span style="font-size: 13px; line-height: 1.5; color: #3A4050"><span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #1B4F9C">AI</span> {{p.ai}}</span>
+                <span style="font-size: 13px; line-height: 1.5; color: #3A4050"><span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #0A5A55">HUMAN</span> {{p.human}}</span>
+              </li>
+            </sc-for>
+          </ol>
+          <a href="#" style="display: inline-block; margin-top: 14px; font-size: 14px">View model audit reports</a>
+        </section>
+
+        <section style="background: #FFFFFF; border: 1px solid #DDE0E7; border-radius: 16px; padding: 22px; display: flex; flex-direction: column; gap: 12px">
+          <h2 style="margin: 0; font-size: 16px; font-weight: 600">Disagree with this synthesis?</h2>
+          <p style="margin: 0; font-size: 14px; line-height: 1.5; color: #3A4050">Challenge a classification, propose a missed study, or publish a competing synthesis. The inclusion criteria are public.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px">
+            <a href="#" style="font-size: 14px; font-weight: 500; padding: 12px 14px; border-radius: 8px; border: 1px solid #14171F; color: #14171F; text-decoration: none">Open a challenge</a>
+            <a href="#" style="font-size: 14px; font-weight: 500; padding: 12px 14px; border-radius: 8px; color: #3341A8; text-decoration: none">Inclusion criteria</a>
+          </div>
+        </section>
+      </aside>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2900}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { filter: 'All', following: false }; }
+  chip(fg, bg) {
+    return 'align-self: flex-start; display: inline-block; font-size: 13px; font-weight: 600; padding: 6px 10px; border-radius: 6px; white-space: nowrap; color: ' + fg + '; background: ' + bg;
+  }
+  renderVals() {
+    var self = this;
+    var rel = { Supports: ['#0A5A55', '#DBF0EC'], Qualifies: ['#7A4E00', '#FDF0D5'], Contradicts: ['#6A2C8E', '#F2E6F9'], Extends: ['#1B4F9C', '#E2ECFA'] };
+    var stat = { 'Preliminary': '#7A4E00', 'Replicated': '#1B4F9C', 'Peer-reviewed': '#3A4050', 'Contested': '#6A2C8E' };
+    var all = [
+      { rel: 'Qualifies', title: 'Explain-first prompting and delayed transfer in an algebra tutor', why: 'Gains on a 2-week transfer test appeared only when students wrote an explanation before receiving AI feedback.', meta: 'Randomized · 412 students, grades 7–9 · Research package with code + data', status: 'Replicated' },
+      { rel: 'Qualifies', title: 'Solution-on-demand vs. hint-only tutoring in introductory statistics', why: 'Solutions on demand raised immediate quiz scores but lowered delayed performance compared with hints only.', meta: 'Randomized · 2 universities · Preprint + 3 open reviews', status: 'Preliminary' },
+      { rel: 'Supports', title: 'Socratic LLM tutoring and self-explanation quality', why: 'Withholding answers produced higher-quality student explanations, and explanation quality predicted later independent problem solving.', meta: 'Quasi-experimental · 6 high schools · Peer-reviewed conference paper', status: 'Peer-reviewed' },
+      { rel: 'Supports', title: 'Meta-analysis: hint granularity in intelligent tutoring systems', why: 'Across pre-LLM tutoring systems, bottom-out hints given too early reduced learning, which matches the current answer.', meta: 'Meta-analysis · 31 studies · Journal article', status: 'Replicated' },
+      { rel: 'Contradicts', title: 'Unrestricted chatbot access in a community-college writing course', why: 'Found no difference in independent writing performance between restricted and unrestricted AI access.', meta: 'Randomized · 1 college · Different domain (writing), open question whether it applies', status: 'Contested' },
+      { rel: 'Extends', title: 'Open learner model + AI tutor: students’ calibration of their own knowledge', why: 'Adds evidence that showing students what the tutor thinks they know improves their help-seeking decisions.', meta: 'Design-based research · 3 classrooms · Dataset reusable', status: 'Preliminary' }
+    ];
+    var names = ['All', 'Supports', 'Qualifies', 'Contradicts', 'Extends'];
+    var filters = names.map(function (n) {
+      var on = self.state.filter === n;
+      var count = n === 'All' ? all.length : all.filter(function (s) { return s.rel === n; }).length;
+      return { label: n + ' (' + count + ')', pressed: on ? 'true' : 'false', pick: function () { self.setState({ filter: n }); },
+        style: 'font: inherit; font-size: 14px; padding: 10px 14px; min-height: 44px; border-radius: 999px; cursor: pointer; border: 1px solid ' + (on ? '#14171F' : '#C4C9D4') + '; background: ' + (on ? '#14171F' : '#FFFFFF') + '; color: ' + (on ? '#FFFFFF' : '#14171F') };
+    });
+    var studies = all.filter(function (s) { return self.state.filter === 'All' || s.rel === self.state.filter; }).map(function (s) {
+      var r = rel[s.rel];
+      return Object.assign({}, s, { relStyle: self.chip(r[0], r[1]) + '; min-width: 96px; text-align: center', statusStyle: 'align-self: flex-start; font-size: 13px; font-weight: 500; padding: 5px 10px; border-radius: 999px; border: 1px solid ' + stat[s.status] + '; color: ' + stat[s.status] + '; white-space: nowrap' });
+    });
+    var following = this.state.following;
+    return {
+      studies: studies,
+      filters: filters,
+      followLabel: following ? 'Following ✓' : 'Follow changes',
+      followPressed: following ? 'true' : 'false',
+      toggleFollow: function () { self.setState({ following: !following }); },
+      followStyle: 'font: inherit; font-size: 14px; font-weight: 500; padding: 10px 16px; min-height: 44px; border-radius: 8px; cursor: pointer; border: 1px solid #3341A8; background: ' + (following ? '#3341A8' : '#FFFFFF') + '; color: ' + (following ? '#FFFFFF' : '#3341A8'),
+      scope: [
+        { label: 'Learners', body: 'Grades 6–12 and first-year undergraduates' },
+        { label: 'Domains', body: 'Mathematics and statistics. Science is emerging.' },
+        { label: 'Outcomes', body: 'Delayed transfer and independent problem solving, not just immediate scores' },
+        { label: 'Not yet established', body: 'Writing, language learning, adult professional training, effects beyond one semester' }
+      ],
+      disagreements: [
+        { title: 'Does the explain-first effect hold outside math?', a: 'It is a general self-explanation effect and should transfer across domains.', b: 'The writing study suggests open-ended domains behave differently.', settle: 'A preregistered multi-domain trial using the same transfer measure.' },
+        { title: 'Is reduced delayed performance a real harm or a measurement artifact?', a: 'Students who rely on solutions do not build schemas, so the harm is real.', b: 'The delayed tests differed in format from the practice tasks.', settle: 'A reanalysis with format-matched delayed measures. The data is available in both packages.' }
+      ],
+      history: [
+        { v: 'v3.2', date: 'Oct 30, 2026', note: 'Added the explain-first condition after two delayed-transfer studies. Scope narrowed to math and statistics.' },
+        { v: 'v3.1', date: 'Jun 12, 2026', note: 'Writing-course study classified as Contradicts. Disagreement opened on cross-domain transfer.' },
+        { v: 'v3.0', date: 'Feb 3, 2026', note: 'Answer revised from “AI tutors help” to “guided hints help, solutions on demand do not.”' },
+        { v: 'v2.4', date: 'Sep 9, 2025', note: 'Meta-analysis of pre-LLM tutoring systems added as supporting context.' }
+      ],
+      pipeline: [
+        { task: 'Route new studies', ai: 'Topic classifier and relevance ranking', human: 'Editors define scope and audit missed studies each month' },
+        { task: 'Extract study details', ai: 'Structured extraction of population, design, and outcomes', human: 'Reviewers verify fields that change conclusions' },
+        { task: 'Link related records', ai: 'Detects preprint → paper versions and study families', human: 'Resolve uncertain matches' },
+        { task: 'Flag conflicts', ai: 'Candidate contradiction detection', human: 'Decide whether it’s a real conflict or a difference in context' },
+        { task: 'Draft the update', ai: 'Proposed wording with source links', human: 'Question editors approve every interpretation' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Stacks — C1 Sign in and first visit</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&amp;family=Libre+Caslon+Text:wght@400;700&amp;family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F5F2EC}
+a{color:#1F4E8C}a:hover{color:#123462}
+/*stk-nav*/.drw{position:relative}.drw>summary{list-style:none;cursor:pointer}.drw>summary::-webkit-details-marker{display:none}
+.drw-menu{display:none !important}.drw[open] .drw-menu{display:flex !important}
+@media (hover: hover){.drw:hover .drw-menu{display:flex !important}.drw-front:hover{transform:translateY(1px)}}
+.bell:hover svg{transform:rotate(-8deg)}/*end-stk-nav*/
+</style>
+</helmet>
+<div style="font-family: 'Public Sans', system-ui, sans-serif; color: #1E1C19; background: #F5F2EC; min-height: 100vh">
+
+  <header style="background: #FFFDF9; border-bottom: 1px solid #CFC9BD; position: relative; z-index: 20">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 10px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 24px; min-height: 68px; box-sizing: border-box">
+      <a href="R01-Home.dc.html" style="font-family: 'Libre Caslon Text', Georgia, serif; font-size: 26px; color: #1E1C19; text-decoration: none; display: inline-flex; align-items: center; gap: 10px">
+        <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><rect x="2" y="4" width="18" height="14" rx="1.5" fill="none" stroke="#1E1C19" stroke-width="1.6"></rect><line x1="2" y1="8" x2="20" y2="8" stroke="#C0392B" stroke-width="1.6"></line><circle cx="11" cy="15" r="1.4" fill="#1E1C19"></circle></svg>
+        Stacks
+      </a>
+      <nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 8px; flex: 1 1 auto; align-items: center">
+        <a class="drw-front" href="R01-Home.dc.html" style="background: #FFFDF9; border: 1px solid #E5E0D6; box-shadow: 0 1px 0 #E5E0D6; border-radius: 4px; padding: 6px 12px 5px; min-height: 44px; box-sizing: border-box; color: #1E1C19; display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; transition: transform 120ms; text-decoration: none"><span style="border: 1px solid #CFC9BD; border-radius: 2px; padding: 2px 10px; background: #FFFDF9; font-size: 14.5px; font-weight: 600; line-height: 1.3; white-space: nowrap; display: inline-flex; align-items: center">Home</span><span aria-hidden="true" style="width: 20px; height: 4px; border-radius: 3px; background: #CFC9BD"></span></a>
+        <details class="drw"><summary class="drw-front" aria-label="Explore menu" style="background: #FFFDF9; border: 1px solid #E5E0D6; box-shadow: 0 1px 0 #E5E0D6; border-radius: 4px; padding: 6px 12px 5px; min-height: 44px; box-sizing: border-box; color: #1E1C19; display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; transition: transform 120ms"><span style="border: 1px solid #CFC9BD; border-radius: 2px; padding: 2px 10px; background: #FFFDF9; font-size: 14.5px; font-weight: 600; line-height: 1.3; white-space: nowrap; display: inline-flex; align-items: center">Explore<span aria-hidden="true" style="font-size: 10px; color: #5E5950; margin-left: 4px">▾</span></span><span aria-hidden="true" style="width: 20px; height: 4px; border-radius: 3px; background: #CFC9BD"></span></summary><div class="drw-menu" style="position: absolute; left: 0; top: 100%; z-index: 30; min-width: 230px; flex-direction: column; background: #FFFDF9; border: 1px solid #CFC9BD; border-radius: 4px; box-shadow: 0 10px 22px rgba(40,32,20,0.16)"><span style="padding: 7px 12px 5px; font-family: 'Courier Prime', monospace; font-size: 11px; letter-spacing: 0.1em; color: #5E5950">IN THIS DRAWER</span><a href="R10-Field.dc.html" style="display: flex; flex-direction: column; gap: 1px; padding: 8px 12px; border-top: 1px solid #EEEAE2; text-decoration: none; color: #1E1C19; min-height: 44px; box-sizing: border-box"><span style="font-size: 14.5px; font-weight: 600">Fields</span><span style="font-family: 'Courier Prime', monospace; font-size: 10.5px; letter-spacing: 0.08em; color: #5E5950">BY DISCIPLINE</span></a><a href="R03-Questions.dc.html" style="display: flex; flex-direction: column; gap: 1px; padding: 8px 12px; border-top: 1px solid #EEEAE2; text-decoration: none; color: #1E1C19; min-height: 44px; box-sizing: border-box"><span style="font-size: 14.5px; font-weight: 600">Questions</span><span style="font-family: 'Courier Prime', monospace; font-size: 10.5px; letter-spacing: 0.08em; color: #5E5950">ANSWERS + EVIDENCE</span></a><a href="R11-Directions.dc.html" style="display: flex; flex-direction: column; gap: 1px; padding: 8px 12px; border-top: 1px solid #EEEAE2; text-decoration: none; color: #1E1C19; min-height: 44px; box-sizing: border-box"><span style="font-size: 14.5px; font-weight: 600">Research directions</span><span style="font-family: 'Courier Prime', monospace; font-size: 10.5px; letter-spacing: 0.08em; color: #5E5950">OPEN PROBLEMS</span></a></div></details>
+      </nav>
+      <div style="display: flex; align-items: center; gap: 12px">
+        <button class="bell" type="button" onClick="{{toggleAsk}}" aria-expanded="{{askExpanded}}" style="font-family: 'Public Sans', sans-serif; font-size: 14px; font-weight: 600; min-height: 44px; padding: 8px 14px 8px 10px; border-radius: 999px; border: 1px solid #1E1C19; background: #1E1C19; color: #FFFDF9; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 2px 0 #CFC9BD"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" style="transition: transform 120ms"><path d="M4 18h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path><path d="M6 17.5a6 6 0 0 1 12 0" fill="none" stroke="currentColor" stroke-width="1.8"></path><path d="M12 9V7.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path><circle cx="12" cy="6.2" r="1.3" fill="currentColor"></circle><path d="M3 20.5h18" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.5"></path></svg><span>Ask the desk</span></button>
+        <a href="C01-SignIn.dc.html" style="font-size: 14px; font-weight: 600; min-height: 44px; padding: 10px 16px; border-radius: 6px; background: #1E1C19; color: #FFFDF9; text-decoration: none; display: inline-flex; align-items: center; box-sizing: border-box">Sign in with ORCID</a>
+      </div>
+    </div>
+  </header>
+
+  <div style="max-width: 880px; margin: 0 auto; padding: 40px 24px 80px; display: flex; flex-direction: column; gap: 28px">
+    <sc-if value="{{askOpen}}" hint-placeholder-val="{{ false }}">
+      <section aria-label="Reference desk" style="background: #FFFDF9; border: 1px solid #E5E0D6; border-radius: 8px; padding: 18px 20px; display: flex; flex-direction: column; gap: 10px">
+        <label for="ask" style="font-size: 15px; font-weight: 600">Ask the stacks</label>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px">
+          <input id="ask" type="text" placeholder="e.g., What do I get for depositing my work?" style="flex: 1 1 280px; min-width: 0; font: inherit; font-size: 16px; padding: 12px 14px; border: 1px solid #CFC9BD; border-radius: 6px; background: #FFFDF9; color: #1E1C19">
+          <a href="R02-Ask.dc.html" style="font-size: 15px; font-weight: 600; min-height: 44px; padding: 10px 18px; border-radius: 6px; background: #1E1C19; color: #FFFDF9; text-decoration: none; display: inline-flex; align-items: center; box-sizing: border-box">Ask</a>
+        </div>
+        <span style="font-size: 13px; color: #5E5950">Answers come from what you're looking at and the questions it links to, with every claim traced. <a href="R02-Ask.dc.html">Open the full reference desk</a></span>
+      </section>
+    </sc-if>
+
+    <sc-if value="{{before}}" hint-placeholder-val="{{ true }}">
+      <section style="background: #FFFDF9; border: 1px solid #E5E0D6; border-top: 2px solid #1E1C19; border-radius: 6px; padding: 28px 28px 32px; display: flex; flex-direction: column; gap: 16px">
+        <span style="font-family: 'Courier Prime', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.12em">SIGN IN</span>
+        <h1 style="margin: 0; font-family: 'Libre Caslon Text', Georgia, serif; font-weight: 400; font-size: clamp(28px, 4vw, 36px); line-height: 1.2">Sign in with your ORCID iD</h1>
+        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #35322C; max-width: 640px">Stacks uses ORCID so every contribution is tied to a verified researcher. We only read your name and ORCID iD. We never post to your ORCID record.</p>
+        <button type="button" onClick="{{signIn}}" style="align-self: flex-start; font-family: 'Public Sans', sans-serif; font-size: 16px; font-weight: 600; min-height: 48px; padding: 12px 22px; border-radius: 6px; border: 0; background: #1E1C19; color: #FFFDF9; cursor: pointer; display: inline-flex; align-items: center; gap: 10px">
+          <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="none" stroke="#FFFDF9" stroke-width="1.6"></circle><text x="10" y="14" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="10" font-weight="700" fill="#FFFDF9">iD</text></svg>
+          Continue with ORCID
+        </button>
+        <span style="font-size: 14px; color: #5E5950">No ORCID iD? <a href="https://orcid.org/register">Register at orcid.org</a>; it's free and takes a minute. Reading Stacks never needs an account.</span>
+      </section>
+      <section style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px">
+        <div style="background: #FFFDF9; border: 1px solid #E5E0D6; border-radius: 6px; padding: 14px 16px; display: flex; flex-direction: column; gap: 4px">
+          <span style="font-family: 'Courier Prime', monospace; font-size: 12px; letter-spacing: 0.08em; color: #5E5950">WITH AN ACCOUNT</span>
+          <span style="font-size: 15px; line-height: 1.5">Follow questions and get a daily digest when they change.</span>
+        </div>
+        <div style="background: #FFFDF9; border: 1px solid #E5E0D6; border-radius: 6px; padding: 14px 16px; display: flex; flex-direction: column; gap: 4px">
+          <span style="font-family: 'Courier Prime', monospace; font-size: 12px; letter-spacing: 0.08em; color: #5E5950">WITH AN ACCOUNT</span>
+          <span style="font-size: 15px; line-height: 1.5">Deposit work, claim records, review, and build your impact score.</span>
+        </div>
+      </section>
+    </sc-if>
+
+    <sc-if value="{{after}}" hint-placeholder-val="{{ false }}">
+      <section style="display: flex; flex-direction: column; gap: 10px">
+        <span style="font-family: 'Courier Prime', monospace; font-size: 13px; letter-spacing: 0.08em; color: #2F6B3A">✓ SIGNED IN · ORCID 0000-0002-1825-0097</span>
+        <h1 style="margin: 0; font-size: 28px; font-weight: 700">Welcome, Rosa. Is this your work?</h1>
+        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #35322C">We found records already in Stacks that list an author who may be you. Claim them to add them to your profile. You'll confirm your role on each one next.</p>
+      </section>
+      <form style="background: #FFFDF9; border: 1px solid #E5E0D6; border-radius: 6px; overflow: hidden">
+        <fieldset style="margin: 0; padding: 0; border: 0">
+          <legend style="position: absolute; left: -9999px">Records to claim</legend>
+          <sc-for list="{{records}}" as="r" hint-placeholder-count="4">
+            <label style="display: flex; gap: 14px; align-items: flex-start; padding: 14px 18px; border-bottom: 1px solid #EEEAE2; cursor: pointer; min-height: 44px">
+              <input type="checkbox" checked="{{r.checked}}" style="width: 20px; height: 20px; margin-top: 2px; accent-color: #1E1C19; flex: none">
+              <span style="display: flex; flex-direction: column; gap: 4px; min-width: 0">
+                <span style="font-family: 'Courier Prime', monospace; font-size: 12px; color: #4F4B43"><strong style="color: #1E1C19">{{r.id}}</strong> · {{r.as}}</span>
+                <span style="font-size: 16px; font-weight: 600; line-height: 1.4">{{r.title}}</span>
+                <span style="font-size: 14px; color: #4F4B43">{{r.why}}</span>
+              </span>
+            </label>
+          </sc-for>
+        </fieldset>
+        <div style="padding: 14px 18px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center">
+          <a href="C05-Claim.dc.html" style="font-size: 15px; font-weight: 600; min-height: 44px; padding: 10px 18px; border-radius: 6px; background: #1E1C19; color: #FFFDF9; text-decoration: none; display: inline-flex; align-items: center; box-sizing: border-box">Claim 3 records</a>
+          <a href="C08-MyStacks.dc.html" style="font-size: 15px; font-weight: 600; min-height: 44px; display: inline-flex; align-items: center; padding: 0 8px">Skip for now</a>
+          <span style="font-size: 13px; color: #5E5950">Not you? Leave it unchecked. Nothing is claimed until you confirm.</span>
+        </div>
+      </form>
+    </sc-if>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1800}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { ask: false, signed: false }; }
+  renderVals() {
+    var self = this;
+    return {
+      askOpen: this.state.ask, askExpanded: this.state.ask ? 'true' : 'false', toggleAsk: function () { self.setState({ ask: !self.state.ask }); },
+      before: !this.state.signed,
+      after: this.state.signed,
+      signIn: function () { self.setState({ signed: true }); },
+      records: [
+        { id: 'STK 2025.0218', as: 'LISTED AS “R. ALVAREZ”', title: 'Hint limits and help-seeking in middle-school tutors', why: 'Same name and Westlake University affiliation', checked: true },
+        { id: 'STK 2024.0566', as: 'LISTED AS “ROSA ALVAREZ”', title: 'Designing prompts for self-explanation in algebra', why: 'Exact name match; co-author with K. Osei', checked: true },
+        { id: 'STK 2023.1902', as: 'LISTED AS “R. M. ALVAREZ”', title: 'A design case: rebuilding an algebra unit around explanations', why: 'Same middle initial on your ORCID record', checked: true },
+        { id: 'STK 2021.0310', as: 'LISTED AS “R. ALVAREZ”', title: 'Soil nutrient cycling in high-altitude grasslands', why: 'Name match only; different field', checked: false }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

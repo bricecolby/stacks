@@ -261,7 +261,9 @@
   // overlay of tabbed file folders, one per drawer, built from the page's own
   // <nav aria-label="Main">, so every screen gets it without markup changes.
   var CAB_CSS = [
-    '.stk-cab{display:none;width:44px;height:44px;box-sizing:border-box;align-items:center;justify-content:center;background:#FFFDF9;border:1px solid #CFC9BD;border-radius:4px;box-shadow:0 1px 0 #E5E0D6;color:#1E1C19;cursor:pointer;padding:0;flex:none}',
+    '.stk-cab{display:none;width:44px;height:44px;box-sizing:border-box;align-items:center;justify-content:center;background:transparent;border:0;border-radius:6px;box-shadow:none;color:#1E1C19;cursor:pointer;padding:0;flex:none}',
+    '.stk-cab:focus-visible{outline:2px solid #1F4E8C;outline-offset:2px}',
+    '.stk-cab svg{width:28px;height:28px}',
     '.stk-cab svg .mid{transition:transform 160ms ease}',
     '.stk-cab[aria-expanded="true"] svg .mid{transform:translateY(1.5px) scale(1.06);transform-origin:12px 12px}',
     '.stk-askshort{display:none}',
@@ -271,7 +273,7 @@
     '  header .stk-hide-m{display:none !important}',
     '  header .stk-right{margin-left:auto;gap:8px !important}',
     '}',
-    '@media (max-width:400px){header .stk-asklabel{display:none}header .stk-askshort{display:inline}}',
+    '@media (max-width:719px){header button.bell{width:44px;padding:0 !important;justify-content:center;gap:0 !important}header .stk-asklabel,header .stk-askshort{display:none !important}}',
     '.stk-ov{position:fixed;inset:0;z-index:1000;background:#F5F2EC;overflow-y:auto;-webkit-overflow-scrolling:touch;font-family:"Public Sans",system-ui,sans-serif;color:#1E1C19}',
     '.stk-ov[hidden]{display:none}',
     '.stk-ov-in{max-width:560px;margin:0 auto;padding:16px 16px 40px;box-sizing:border-box;animation:stk-slide 200ms ease-out}',
@@ -365,6 +367,7 @@
         lab.classList.add('stk-asklabel');
         var sh = el('span', { 'class': 'stk-askshort' }, 'Ask'); lab.parentNode.insertBefore(sh, lab.nextSibling);
       }
+      if (!bell.getAttribute('aria-label')) bell.setAttribute('aria-label', 'Ask the desk');
     }
     var btn = el('button', { type: 'button', 'class': 'stk-cab', 'aria-label': 'Open the card catalog (site menu)', 'aria-haspopup': 'dialog', 'aria-expanded': cabState.open ? 'true' : 'false' });
     btn.innerHTML = CAB_ICON;

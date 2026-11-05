@@ -72,6 +72,6 @@ button whose three drawer fronts double as hamburger lines. It opens a
 full-screen "card catalog" overlay: Home on top, then one tabbed file folder
 per drawer (Explore, My Stacks, Curation), with each page shown as an index
 card. The current section's folder starts open, and the current page is marked
-"You are here". Ask the desk stays in the header. The overlay is built from
+"You are here". Ask the desk stays in the header as a round bell button (its label is hidden on phones). The overlay is built from
 each page's own menu, so the page files didn't change. It isn't on the canvas
 yet; if it's kept, it should go there as a proper mobile header.

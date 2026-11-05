@@ -61,3 +61,6 @@ apply these changes again:
 2. C8 My Stacks has a "Sign out" link (`index.html?view=Visitor`) next to
    "Public profile".
 3. Files in `explorations/` load `../support.js` instead of `./support.js`.
+4. Every page has `<meta name="viewport" content="width=device-width, initial-scale=1">`
+   after `<meta charset="utf-8">`, so phones use the mobile layout. (The canvas
+   viewer supplies this itself, so exported files don't have it.)
